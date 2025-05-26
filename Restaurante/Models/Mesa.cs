@@ -10,13 +10,13 @@ namespace Restaurante.Models
     {
         public int Id { get; set; }
         public int Numero { get; set; }
-        public int Capacidad { get; set; }
+        public int Capacidade { get; set; }
         public bool Ocupada { get; set; }
-        public Mesa(int id, int numero, int capacidad, bool ocupada)
+        public Mesa(int id, int numero, int capacidade, bool ocupada)
         {
             Id = id;
             Numero = numero;
-            Capacidad = capacidad;
+            Capacidade = capacidade;
             Ocupada = ocupada;
         }
     }

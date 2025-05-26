@@ -184,5 +184,22 @@ namespace Restaurante
             dataGridView1.DataSource = null; // limpa a origem anterior
             dataGridView1.DataSource = (clientes);
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void VisualizarClientes_Click(object sender, EventArgs e)
+        {
+            MostrarClientes mostrarClientes = new MostrarClientes();
+            mostrarClientes.Show(); // abre o form como janela independente
+            this.Hide(); // Fecha o Form1
+        }
     }
 }

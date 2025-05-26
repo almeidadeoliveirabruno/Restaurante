@@ -50,6 +50,8 @@ namespace Restaurante
             this.repositorioClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.repositorioClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.VisualizarClientes = new System.Windows.Forms.Button();
             this.repositorioClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositorioClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,19 +67,20 @@ namespace Restaurante
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(683, 20);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(613, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(614, 85);
+            this.label1.Size = new System.Drawing.Size(685, 95);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro Cliente";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // NomeInput
             // 
-            this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeInput.Location = new System.Drawing.Point(586, 156);
+            this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeInput.Location = new System.Drawing.Point(961, 107);
             this.NomeInput.Name = "NomeInput";
-            this.NomeInput.Size = new System.Drawing.Size(387, 45);
+            this.NomeInput.Size = new System.Drawing.Size(888, 75);
             this.NomeInput.TabIndex = 1;
             this.NomeInput.TextChanged += new System.EventHandler(this.Nome_TextChanged);
             this.NomeInput.Enter += new System.EventHandler(this.NomeInput_Enter);
@@ -85,10 +88,10 @@ namespace Restaurante
             // 
             // CPFInput
             // 
-            this.CPFInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPFInput.Location = new System.Drawing.Point(586, 234);
+            this.CPFInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPFInput.Location = new System.Drawing.Point(958, 343);
             this.CPFInput.Name = "CPFInput";
-            this.CPFInput.Size = new System.Drawing.Size(387, 45);
+            this.CPFInput.Size = new System.Drawing.Size(891, 75);
             this.CPFInput.TabIndex = 2;
             this.CPFInput.TextChanged += new System.EventHandler(this.CPF_TextChanged);
             this.CPFInput.Enter += new System.EventHandler(this.CPFInput_Enter);
@@ -97,12 +100,12 @@ namespace Restaurante
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1424, 156);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1503, 227);
             this.dateTimePicker1.MaxDate = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(209, 41);
+            this.dateTimePicker1.Size = new System.Drawing.Size(349, 75);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -110,51 +113,50 @@ namespace Restaurante
             // Nome
             // 
             this.Nome.AutoSize = true;
-            this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.Location = new System.Drawing.Point(402, 156);
+            this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nome.Location = new System.Drawing.Point(634, 113);
             this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(97, 36);
+            this.Nome.Size = new System.Drawing.Size(189, 69);
             this.Nome.TabIndex = 4;
             this.Nome.Text = "Nome";
             // 
             // CPF
             // 
             this.CPF.AutoSize = true;
-            this.CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPF.Location = new System.Drawing.Point(402, 234);
+            this.CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPF.Location = new System.Drawing.Point(634, 349);
             this.CPF.Name = "CPF";
-            this.CPF.Size = new System.Drawing.Size(77, 36);
+            this.CPF.Size = new System.Drawing.Size(150, 69);
             this.CPF.TabIndex = 5;
             this.CPF.Text = "CPF";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1055, 156);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(634, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(299, 36);
+            this.label2.Size = new System.Drawing.Size(570, 69);
             this.label2.TabIndex = 6;
             this.label2.Text = "Data de Nascimento";
             // 
             // Endereco
             // 
             this.Endereco.AutoSize = true;
-            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Endereco.Location = new System.Drawing.Point(402, 305);
+            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Endereco.Location = new System.Drawing.Point(634, 703);
             this.Endereco.Name = "Endereco";
-            this.Endereco.Size = new System.Drawing.Size(151, 36);
+            this.Endereco.Size = new System.Drawing.Size(285, 69);
             this.Endereco.TabIndex = 7;
             this.Endereco.Text = "Endereço";
             this.Endereco.Click += new System.EventHandler(this.label3_Click);
             // 
             // EnderecoInput
             // 
-            this.EnderecoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnderecoInput.Location = new System.Drawing.Point(586, 305);
-            this.EnderecoInput.Multiline = true;
+            this.EnderecoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnderecoInput.Location = new System.Drawing.Point(964, 697);
             this.EnderecoInput.Name = "EnderecoInput";
-            this.EnderecoInput.Size = new System.Drawing.Size(387, 179);
+            this.EnderecoInput.Size = new System.Drawing.Size(891, 75);
             this.EnderecoInput.TabIndex = 8;
             this.EnderecoInput.Enter += new System.EventHandler(this.EnderecoInput_Enter);
             this.EnderecoInput.Leave += new System.EventHandler(this.EnderecoInput_Leave);
@@ -162,19 +164,19 @@ namespace Restaurante
             // Telefone
             // 
             this.Telefone.AutoSize = true;
-            this.Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefone.Location = new System.Drawing.Point(1055, 230);
+            this.Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefone.Location = new System.Drawing.Point(634, 585);
             this.Telefone.Name = "Telefone";
-            this.Telefone.Size = new System.Drawing.Size(138, 36);
+            this.Telefone.Size = new System.Drawing.Size(263, 69);
             this.Telefone.TabIndex = 9;
             this.Telefone.Text = "Telefone";
             // 
             // TelefoneInput
             // 
-            this.TelefoneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelefoneInput.Location = new System.Drawing.Point(1246, 230);
+            this.TelefoneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TelefoneInput.Location = new System.Drawing.Point(964, 579);
             this.TelefoneInput.Name = "TelefoneInput";
-            this.TelefoneInput.Size = new System.Drawing.Size(387, 45);
+            this.TelefoneInput.Size = new System.Drawing.Size(888, 75);
             this.TelefoneInput.TabIndex = 10;
             this.TelefoneInput.Enter += new System.EventHandler(this.TelefoneInput_Enter);
             this.TelefoneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -183,19 +185,19 @@ namespace Restaurante
             // Email
             // 
             this.Email.AutoSize = true;
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(1055, 310);
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(634, 467);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(93, 36);
+            this.Email.Size = new System.Drawing.Size(181, 69);
             this.Email.TabIndex = 11;
             this.Email.Text = "Email";
             // 
             // EmailInput
             // 
-            this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailInput.Location = new System.Drawing.Point(1246, 310);
+            this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailInput.Location = new System.Drawing.Point(961, 461);
             this.EmailInput.Name = "EmailInput";
-            this.EmailInput.Size = new System.Drawing.Size(387, 45);
+            this.EmailInput.Size = new System.Drawing.Size(888, 75);
             this.EmailInput.TabIndex = 12;
             this.EmailInput.Enter += new System.EventHandler(this.EmailInput_Enter);
             this.EmailInput.Leave += new System.EventHandler(this.EmailInput_Leave);
@@ -203,10 +205,10 @@ namespace Restaurante
             // Cadastrar
             // 
             this.Cadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cadastrar.Location = new System.Drawing.Point(1061, 419);
+            this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cadastrar.Location = new System.Drawing.Point(1499, 825);
             this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Size = new System.Drawing.Size(225, 65);
+            this.Cadastrar.Size = new System.Drawing.Size(350, 150);
             this.Cadastrar.TabIndex = 13;
             this.Cadastrar.Text = "Cadastrar";
             this.Cadastrar.UseVisualStyleBackColor = false;
@@ -219,12 +221,33 @@ namespace Restaurante
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 405);
+            this.dataGridView1.Location = new System.Drawing.Point(406, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 127);
+            this.dataGridView1.Size = new System.Drawing.Size(199, 127);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Location = new System.Drawing.Point(2, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(398, 1016);
+            this.panel1.TabIndex = 15;
+            // 
+            // VisualizarClientes
+            // 
+            this.VisualizarClientes.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.VisualizarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisualizarClientes.Location = new System.Drawing.Point(629, 825);
+            this.VisualizarClientes.Name = "VisualizarClientes";
+            this.VisualizarClientes.Size = new System.Drawing.Size(350, 150);
+            this.VisualizarClientes.TabIndex = 16;
+            this.VisualizarClientes.Text = "Visualizar Clientes";
+            this.VisualizarClientes.UseVisualStyleBackColor = false;
+            this.VisualizarClientes.Click += new System.EventHandler(this.VisualizarClientes_Click);
             // 
             // repositorioClienteBindingSource3
             // 
@@ -242,7 +265,9 @@ namespace Restaurante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1782, 608);
+            this.ClientSize = new System.Drawing.Size(1909, 1019);
+            this.Controls.Add(this.VisualizarClientes);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.EmailInput);
@@ -260,6 +285,7 @@ namespace Restaurante
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
@@ -297,6 +323,8 @@ namespace Restaurante
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource repositorioClienteBindingSource3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button VisualizarClientes;
     }
 }
 
