@@ -35,12 +35,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-3, -1);
+            this.dataGridView1.Location = new System.Drawing.Point(439, 67);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(199, 127);
+            this.dataGridView1.Size = new System.Drawing.Size(1449, 428);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -48,9 +51,10 @@
             // 
             this.Cadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cadastrar.Location = new System.Drawing.Point(1499, 825);
+            this.Cadastrar.Location = new System.Drawing.Point(637, 589);
+            this.Cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cadastrar.Name = "Cadastrar";
-            this.Cadastrar.Size = new System.Drawing.Size(350, 299);
+            this.Cadastrar.Size = new System.Drawing.Size(936, 100);
             this.Cadastrar.TabIndex = 16;
             this.Cadastrar.Text = "Cadastrar Novos Clientes";
             this.Cadastrar.UseVisualStyleBackColor = false;
@@ -59,12 +63,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1917, 1020);
+            this.ClientSize = new System.Drawing.Size(1924, 1040);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.dataGridView1);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MostrarClientes";
             this.Text = "MostrarClientes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.Cadastrar, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

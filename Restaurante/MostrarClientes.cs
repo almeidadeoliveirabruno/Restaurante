@@ -11,13 +11,16 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class MostrarClientes: Form
+    public partial class MostrarClientes: FormBase
     {
         public MostrarClientes()
         {
             InitializeComponent();
             dataGridView1.DataSource = null; // limpa a origem anterior
             dataGridView1.DataSource = (RepositorioCliente.Clientes);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.Columns["Nome"].Width = 400;
+            dataGridView1.Columns["CPF"].Width = 150;
 
         }
 

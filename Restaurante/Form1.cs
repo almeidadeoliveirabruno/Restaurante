@@ -17,17 +17,15 @@ namespace Restaurante
         {
             InitializeComponent();
             var clienteTeste = new Cliente(
-            nome: "Maria Oliveira",
+            nome: "Maria Oliveira Teixeira Paula",
             cpf: "98765432100",
             telefone: "21988887777",
-            endereco: "Rua das Flores, 456",
+            endereco: "Rua das Flores, 456, Rio De Janeiro, Brasil, Volta Redonda, Qualquer coisa",
             email: "maria@teste.com",
             dataNascimento: new DateTime(1985, 3, 10)
         );
 
             RepositorioCliente.Adicionar(clienteTeste);
-            dataGridView1.DataSource = null; // limpa a origem anterior
-            dataGridView1.DataSource = (RepositorioCliente.Clientes);
 
         }
 
@@ -87,6 +85,11 @@ namespace Restaurante
                 MessageBox.Show("Por favor, preencha o campo de CPF com 11 dígitos.");
                 CPFInput.Focus();
             }
+            else if (string.IsNullOrWhiteSpace(EmailInput.Text) || !EmailInput.Text.Contains("@"))
+            {
+                MessageBox.Show("Por favor, preencha o campo de email com um email válido.");
+                EmailInput.Focus();
+            }
             else if (string.IsNullOrWhiteSpace(TelefoneInput.Text) || TelefoneInput.Text.Length < 10)
             {
                 MessageBox.Show("Por favor, preencha o campo de telefone com pelo menos 10 dígitos.");
@@ -97,6 +100,7 @@ namespace Restaurante
                 MessageBox.Show("Por favor, preencha o campo de endereço.");
                 EnderecoInput.Focus();
             }
+           
             else if (RepositorioCliente.VerificaSeClienteExiste(CPFInput.Text))
             {
                 MessageBox.Show("O cpf já exista.");
@@ -120,8 +124,6 @@ namespace Restaurante
                 TelefoneInput.Clear();
                 EnderecoInput.Clear();
                 EmailInput.Clear();
-                dataGridView1.DataSource = null; // limpa a origem anterior
-                dataGridView1.DataSource = (RepositorioCliente.Clientes);
             }
         }
 
@@ -169,21 +171,6 @@ namespace Restaurante
         #endregion
 
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            var clientes = RepositorioCliente.Clientes;
-            var clienteTeste = new Cliente(
-            nome: "João Silva",
-            cpf: "12345678901",
-            telefone: "21999998888",
-            endereco: "Rua Teste, 123",
-            email: "joao.silva@teste.com",
-            dataNascimento: new DateTime(1990, 5, 20)
-            );
-            clientes.Add(clienteTeste);
-            dataGridView1.DataSource = null; // limpa a origem anterior
-            dataGridView1.DataSource = (clientes);
-        }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -199,7 +186,27 @@ namespace Restaurante
         {
             MostrarClientes mostrarClientes = new MostrarClientes();
             mostrarClientes.Show(); // abre o form como janela independente
-            this.Hide(); // Fecha o Form1
+        }
+
+        private void EmailInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Nome.Text = "Teste";
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void button2_DragEnter(object sender, DragEventArgs e)
+        {
+
         }
     }
 }

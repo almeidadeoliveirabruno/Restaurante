@@ -1,0 +1,253 @@
+﻿namespace Restaurante
+{
+    partial class CadastroCozinheiro
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.VisualizarClientes = new System.Windows.Forms.Button();
+            this.Cadastrar = new System.Windows.Forms.Button();
+            this.EmailInput = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.Label();
+            this.TelefoneInput = new System.Windows.Forms.TextBox();
+            this.Telefone = new System.Windows.Forms.Label();
+            this.EnderecoInput = new System.Windows.Forms.TextBox();
+            this.Endereco = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CPF = new System.Windows.Forms.Label();
+            this.Nome = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CPFInput = new System.Windows.Forms.TextBox();
+            this.NomeInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // VisualizarClientes
+            // 
+            this.VisualizarClientes.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.VisualizarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisualizarClientes.Location = new System.Drawing.Point(581, 817);
+            this.VisualizarClientes.Name = "VisualizarClientes";
+            this.VisualizarClientes.Size = new System.Drawing.Size(350, 150);
+            this.VisualizarClientes.TabIndex = 31;
+            this.VisualizarClientes.Text = "Visualizar Clientes";
+            this.VisualizarClientes.UseVisualStyleBackColor = false;
+            // 
+            // Cadastrar
+            // 
+            this.Cadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cadastrar.Location = new System.Drawing.Point(1451, 817);
+            this.Cadastrar.Name = "Cadastrar";
+            this.Cadastrar.Size = new System.Drawing.Size(350, 150);
+            this.Cadastrar.TabIndex = 30;
+            this.Cadastrar.Text = "Cadastrar";
+            this.Cadastrar.UseVisualStyleBackColor = false;
+            // 
+            // EmailInput
+            // 
+            this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailInput.Location = new System.Drawing.Point(913, 467);
+            this.EmailInput.Name = "EmailInput";
+            this.EmailInput.Size = new System.Drawing.Size(888, 75);
+            this.EmailInput.TabIndex = 29;
+            // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(586, 473);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(181, 69);
+            this.Email.TabIndex = 28;
+            this.Email.Text = "Email";
+            // 
+            // TelefoneInput
+            // 
+            this.TelefoneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TelefoneInput.Location = new System.Drawing.Point(916, 585);
+            this.TelefoneInput.Name = "TelefoneInput";
+            this.TelefoneInput.Size = new System.Drawing.Size(888, 75);
+            this.TelefoneInput.TabIndex = 27;
+            // 
+            // Telefone
+            // 
+            this.Telefone.AutoSize = true;
+            this.Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefone.Location = new System.Drawing.Point(586, 591);
+            this.Telefone.Name = "Telefone";
+            this.Telefone.Size = new System.Drawing.Size(263, 69);
+            this.Telefone.TabIndex = 26;
+            this.Telefone.Text = "Telefone";
+            // 
+            // EnderecoInput
+            // 
+            this.EnderecoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnderecoInput.Location = new System.Drawing.Point(916, 703);
+            this.EnderecoInput.Name = "EnderecoInput";
+            this.EnderecoInput.Size = new System.Drawing.Size(891, 75);
+            this.EnderecoInput.TabIndex = 25;
+            // 
+            // Endereco
+            // 
+            this.Endereco.AutoSize = true;
+            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Endereco.Location = new System.Drawing.Point(586, 709);
+            this.Endereco.Name = "Endereco";
+            this.Endereco.Size = new System.Drawing.Size(285, 69);
+            this.Endereco.TabIndex = 24;
+            this.Endereco.Text = "Endereço";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(586, 237);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(570, 69);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Data de Nascimento";
+            // 
+            // CPF
+            // 
+            this.CPF.AutoSize = true;
+            this.CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPF.Location = new System.Drawing.Point(586, 355);
+            this.CPF.Name = "CPF";
+            this.CPF.Size = new System.Drawing.Size(150, 69);
+            this.CPF.TabIndex = 22;
+            this.CPF.Text = "CPF";
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSize = true;
+            this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nome.Location = new System.Drawing.Point(586, 119);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(189, 69);
+            this.Nome.TabIndex = 21;
+            this.Nome.Text = "Nome";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1455, 233);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(349, 75);
+            this.dateTimePicker1.TabIndex = 20;
+            this.dateTimePicker1.Value = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
+            // 
+            // CPFInput
+            // 
+            this.CPFInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPFInput.Location = new System.Drawing.Point(910, 349);
+            this.CPFInput.Name = "CPFInput";
+            this.CPFInput.Size = new System.Drawing.Size(891, 75);
+            this.CPFInput.TabIndex = 19;
+            // 
+            // NomeInput
+            // 
+            this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeInput.Location = new System.Drawing.Point(913, 113);
+            this.NomeInput.Name = "NomeInput";
+            this.NomeInput.Size = new System.Drawing.Size(888, 75);
+            this.NomeInput.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(565, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(676, 95);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Cadastro Cliente";
+            // 
+            // CadastroCozinheiro
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1852, 1055);
+            this.Controls.Add(this.VisualizarClientes);
+            this.Controls.Add(this.Cadastrar);
+            this.Controls.Add(this.EmailInput);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.TelefoneInput);
+            this.Controls.Add(this.Telefone);
+            this.Controls.Add(this.EnderecoInput);
+            this.Controls.Add(this.Endereco);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CPF);
+            this.Controls.Add(this.Nome);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.CPFInput);
+            this.Controls.Add(this.NomeInput);
+            this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Name = "CadastroCozinheiro";
+            this.Text = "CadastroCozinheiro";
+            this.Load += new System.EventHandler(this.CadastroCozinheiro_Load);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.NomeInput, 0);
+            this.Controls.SetChildIndex(this.CPFInput, 0);
+            this.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            this.Controls.SetChildIndex(this.Nome, 0);
+            this.Controls.SetChildIndex(this.CPF, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.Endereco, 0);
+            this.Controls.SetChildIndex(this.EnderecoInput, 0);
+            this.Controls.SetChildIndex(this.Telefone, 0);
+            this.Controls.SetChildIndex(this.TelefoneInput, 0);
+            this.Controls.SetChildIndex(this.Email, 0);
+            this.Controls.SetChildIndex(this.EmailInput, 0);
+            this.Controls.SetChildIndex(this.Cadastrar, 0);
+            this.Controls.SetChildIndex(this.VisualizarClientes, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button VisualizarClientes;
+        private System.Windows.Forms.Button Cadastrar;
+        private System.Windows.Forms.TextBox EmailInput;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.TextBox TelefoneInput;
+        private System.Windows.Forms.Label Telefone;
+        private System.Windows.Forms.TextBox EnderecoInput;
+        private System.Windows.Forms.Label Endereco;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label CPF;
+        private System.Windows.Forms.Label Nome;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox CPFInput;
+        private System.Windows.Forms.TextBox NomeInput;
+        private System.Windows.Forms.Label label1;
+    }
+}

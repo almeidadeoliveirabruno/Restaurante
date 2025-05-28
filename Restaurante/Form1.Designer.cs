@@ -49,8 +49,12 @@ namespace Restaurante
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositorioClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.repositorioClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.VisualizarClientes = new System.Windows.Forms.Button();
             this.repositorioClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,7 +62,7 @@ namespace Restaurante
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource)).BeginInit();
@@ -70,7 +74,7 @@ namespace Restaurante
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(613, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(685, 95);
+            this.label1.Size = new System.Drawing.Size(676, 95);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro Cliente";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -199,6 +203,7 @@ namespace Restaurante
             this.EmailInput.Name = "EmailInput";
             this.EmailInput.Size = new System.Drawing.Size(888, 75);
             this.EmailInput.TabIndex = 12;
+            this.EmailInput.TextChanged += new System.EventHandler(this.EmailInput_TextChanged);
             this.EmailInput.Enter += new System.EventHandler(this.EmailInput_Enter);
             this.EmailInput.Leave += new System.EventHandler(this.EmailInput_Leave);
             // 
@@ -206,7 +211,7 @@ namespace Restaurante
             // 
             this.Cadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cadastrar.Location = new System.Drawing.Point(1499, 825);
+            this.Cadastrar.Location = new System.Drawing.Point(1499, 811);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(350, 150);
             this.Cadastrar.TabIndex = 13;
@@ -218,30 +223,86 @@ namespace Restaurante
             // 
             this.clientesBindingSource.DataMember = "Clientes";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(406, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(199, 127);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(2, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 1016);
             this.panel1.TabIndex = 15;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(3, 134);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(395, 140);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "Pedidos";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(3, 312);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(395, 140);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Itens";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(3, 817);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(395, 140);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Mesas";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.DragEnter += new System.Windows.Forms.DragEventHandler(this.button2_DragEnter);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(3, 650);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(395, 140);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Garçons";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.DragEnter += new System.Windows.Forms.DragEventHandler(this.button2_DragEnter);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 483);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(395, 140);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Clientes";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // VisualizarClientes
             // 
             this.VisualizarClientes.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.VisualizarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisualizarClientes.Location = new System.Drawing.Point(629, 825);
+            this.VisualizarClientes.Location = new System.Drawing.Point(629, 811);
             this.VisualizarClientes.Name = "VisualizarClientes";
             this.VisualizarClientes.Size = new System.Drawing.Size(350, 150);
             this.VisualizarClientes.TabIndex = 16;
@@ -268,7 +329,6 @@ namespace Restaurante
             this.ClientSize = new System.Drawing.Size(1909, 1019);
             this.Controls.Add(this.VisualizarClientes);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.EmailInput);
             this.Controls.Add(this.Email);
@@ -291,7 +351,7 @@ namespace Restaurante
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource)).EndInit();
@@ -321,10 +381,14 @@ namespace Restaurante
         private System.Windows.Forms.BindingSource repositorioClienteBindingSource1;
         private System.Windows.Forms.BindingSource repositorioClienteBindingSource2;
         private System.Windows.Forms.BindingSource clienteBindingSource;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource repositorioClienteBindingSource3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button VisualizarClientes;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 
