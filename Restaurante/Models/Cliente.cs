@@ -15,7 +15,7 @@ namespace Restaurante.Models
         // e se criar cliente com o mesmo cpf?
 
         public Cliente( string nome, string cpf, string telefone, string endereco, string email, DateTime dataNascimento)
-         : base(nome, cpf, telefone, endereco, dataNascimento)
+         : base(nome, cpf, telefone, endereco, dataNascimento,email)
         {
             ClienteID = geradorClienteId;
             geradorClienteId++;

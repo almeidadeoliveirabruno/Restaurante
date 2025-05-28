@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class Form1 : Form
+    public partial class Form1 : FormBase
     {
         public Form1()
         {
@@ -26,6 +26,7 @@ namespace Restaurante
         );
 
             RepositorioCliente.Adicionar(clienteTeste);
+           
 
         }
 

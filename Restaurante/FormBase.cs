@@ -17,6 +17,8 @@ namespace Restaurante
             InitializeComponent();
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             MostrarClientes mostrarClientes = new MostrarClientes();
@@ -30,6 +32,25 @@ namespace Restaurante
                 this.Hide();
             }
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CadastroEmpregados cadastroCozinheiro = new CadastroEmpregados();
+            cadastroCozinheiro.Show();
+            if (!(this is Form1))
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

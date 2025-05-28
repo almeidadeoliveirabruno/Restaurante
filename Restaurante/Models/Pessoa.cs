@@ -14,6 +14,7 @@ namespace Restaurante.Models
         protected string telefone;
         protected string endereco;
         protected DateTime dataNascimento;
+        protected string email;
         public string Nome
         {
             get { return nome; }
@@ -34,7 +35,10 @@ namespace Restaurante.Models
         {
             get { return cpf; }
         }
-
+        public string Email
+        {
+            get { return email; }
+        }
         public int Idade //fazer exceções de erro
         {
             get
@@ -47,13 +51,14 @@ namespace Restaurante.Models
             }
         }
 
-        public Pessoa(string nome,string cpf, string telefone, string endereco, DateTime datanascimento)
+        public Pessoa(string nome,string cpf, string telefone, string endereco, DateTime datanascimento, string email)
         {
             this.nome = nome;
             this.cpf = cpf;
             this.telefone = telefone;
             this.endereco = endereco;
             this.dataNascimento = datanascimento;
+            this.email = email;
         }
     }
 }

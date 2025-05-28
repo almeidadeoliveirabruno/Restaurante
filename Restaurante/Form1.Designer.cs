@@ -49,7 +49,6 @@ namespace Restaurante
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositorioClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.repositorioClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,7 +61,6 @@ namespace Restaurante
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource)).BeginInit();
@@ -223,19 +221,6 @@ namespace Restaurante
             // 
             this.clientesBindingSource.DataMember = "Clientes";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Info;
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(2, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 1016);
-            this.panel1.TabIndex = 15;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -328,7 +313,6 @@ namespace Restaurante
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1909, 1019);
             this.Controls.Add(this.VisualizarClientes);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.EmailInput);
             this.Controls.Add(this.Email);
@@ -343,15 +327,29 @@ namespace Restaurante
             this.Controls.Add(this.CPFInput);
             this.Controls.Add(this.NomeInput);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.NomeInput, 0);
+            this.Controls.SetChildIndex(this.CPFInput, 0);
+            this.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            this.Controls.SetChildIndex(this.Nome, 0);
+            this.Controls.SetChildIndex(this.CPF, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.Endereco, 0);
+            this.Controls.SetChildIndex(this.EnderecoInput, 0);
+            this.Controls.SetChildIndex(this.Telefone, 0);
+            this.Controls.SetChildIndex(this.TelefoneInput, 0);
+            this.Controls.SetChildIndex(this.Email, 0);
+            this.Controls.SetChildIndex(this.EmailInput, 0);
+            this.Controls.SetChildIndex(this.Cadastrar, 0);
+            this.Controls.SetChildIndex(this.VisualizarClientes, 0);
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource1)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositorioClienteBindingSource)).EndInit();
@@ -382,7 +380,6 @@ namespace Restaurante
         private System.Windows.Forms.BindingSource repositorioClienteBindingSource2;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private System.Windows.Forms.BindingSource repositorioClienteBindingSource3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button VisualizarClientes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class CadastroCozinheiro: FormBase
+    public partial class VisualizarEmpregados: FormBase
     {
-        public CadastroCozinheiro()
+        public VisualizarEmpregados()
         {
             InitializeComponent();
-        }
-
-        private void CadastroCozinheiro_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

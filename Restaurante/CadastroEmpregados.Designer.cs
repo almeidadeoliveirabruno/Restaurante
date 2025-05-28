@@ -1,6 +1,6 @@
 ﻿namespace Restaurante
 {
-    partial class CadastroCozinheiro
+    partial class CadastroEmpregados
     {
         /// <summary>
         /// Required designer variable.
@@ -43,37 +43,45 @@
             this.CPFInput = new System.Windows.Forms.TextBox();
             this.NomeInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // VisualizarClientes
             // 
             this.VisualizarClientes.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.VisualizarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisualizarClientes.Location = new System.Drawing.Point(581, 817);
+            this.VisualizarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisualizarClientes.Location = new System.Drawing.Point(1601, 489);
             this.VisualizarClientes.Name = "VisualizarClientes";
             this.VisualizarClientes.Size = new System.Drawing.Size(350, 150);
             this.VisualizarClientes.TabIndex = 31;
-            this.VisualizarClientes.Text = "Visualizar Clientes";
+            this.VisualizarClientes.Text = "Visualizar Funcionarios";
             this.VisualizarClientes.UseVisualStyleBackColor = false;
+            this.VisualizarClientes.Click += new System.EventHandler(this.VisualizarClientes_Click);
             // 
             // Cadastrar
             // 
             this.Cadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cadastrar.Location = new System.Drawing.Point(1451, 817);
+            this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cadastrar.Location = new System.Drawing.Point(1601, 237);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(350, 150);
             this.Cadastrar.TabIndex = 30;
-            this.Cadastrar.Text = "Cadastrar";
+            this.Cadastrar.Text = "Cadastrar ";
             this.Cadastrar.UseVisualStyleBackColor = false;
+            this.Cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
             // 
             // EmailInput
             // 
             this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailInput.Location = new System.Drawing.Point(913, 467);
             this.EmailInput.Name = "EmailInput";
-            this.EmailInput.Size = new System.Drawing.Size(888, 75);
+            this.EmailInput.Size = new System.Drawing.Size(650, 75);
             this.EmailInput.TabIndex = 29;
+            this.EmailInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.EmailInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // Email
             // 
@@ -90,8 +98,10 @@
             this.TelefoneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TelefoneInput.Location = new System.Drawing.Point(916, 585);
             this.TelefoneInput.Name = "TelefoneInput";
-            this.TelefoneInput.Size = new System.Drawing.Size(888, 75);
+            this.TelefoneInput.Size = new System.Drawing.Size(650, 75);
             this.TelefoneInput.TabIndex = 27;
+            this.TelefoneInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.TelefoneInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // Telefone
             // 
@@ -108,8 +118,10 @@
             this.EnderecoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnderecoInput.Location = new System.Drawing.Point(916, 703);
             this.EnderecoInput.Name = "EnderecoInput";
-            this.EnderecoInput.Size = new System.Drawing.Size(891, 75);
+            this.EnderecoInput.Size = new System.Drawing.Size(650, 75);
             this.EnderecoInput.TabIndex = 25;
+            this.EnderecoInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.EnderecoInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // Endereco
             // 
@@ -155,7 +167,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1455, 233);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1211, 237);
             this.dateTimePicker1.MaxDate = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(349, 75);
@@ -167,16 +179,21 @@
             this.CPFInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPFInput.Location = new System.Drawing.Point(910, 349);
             this.CPFInput.Name = "CPFInput";
-            this.CPFInput.Size = new System.Drawing.Size(891, 75);
+            this.CPFInput.Size = new System.Drawing.Size(650, 75);
             this.CPFInput.TabIndex = 19;
+            this.CPFInput.TextChanged += new System.EventHandler(this.CadastroCozinheiro_Load);
+            this.CPFInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.CPFInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // NomeInput
             // 
             this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomeInput.Location = new System.Drawing.Point(913, 113);
             this.NomeInput.Name = "NomeInput";
-            this.NomeInput.Size = new System.Drawing.Size(888, 75);
+            this.NomeInput.Size = new System.Drawing.Size(650, 75);
             this.NomeInput.TabIndex = 18;
+            this.NomeInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.NomeInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // label1
             // 
@@ -184,15 +201,60 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(565, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(676, 95);
+            this.label1.Size = new System.Drawing.Size(899, 95);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Cadastro Cliente";
+            this.label1.Text = "Cadastro Funcionários";
             // 
-            // CadastroCozinheiro
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(586, 833);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(229, 69);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Função";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(916, 834);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(280, 68);
+            this.listBox1.TabIndex = 33;
+            this.listBox1.Enter += new System.EventHandler(this.Input_Enter);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1269, 827);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(217, 69);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Salário";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(1557, 821);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(280, 75);
+            this.textBox1.TabIndex = 35;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.Input_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.Input_Leave);
+            // 
+            // CadastroEmpregados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1852, 1055);
+            this.ClientSize = new System.Drawing.Size(1839, 1055);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.VisualizarClientes);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.EmailInput);
@@ -209,7 +271,7 @@
             this.Controls.Add(this.NomeInput);
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "CadastroCozinheiro";
+            this.Name = "CadastroEmpregados";
             this.Text = "CadastroCozinheiro";
             this.Load += new System.EventHandler(this.CadastroCozinheiro_Load);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -227,6 +289,10 @@
             this.Controls.SetChildIndex(this.EmailInput, 0);
             this.Controls.SetChildIndex(this.Cadastrar, 0);
             this.Controls.SetChildIndex(this.VisualizarClientes, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.listBox1, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +315,9 @@
         private System.Windows.Forms.TextBox CPFInput;
         private System.Windows.Forms.TextBox NomeInput;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
