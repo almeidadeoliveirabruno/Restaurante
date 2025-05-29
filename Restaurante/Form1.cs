@@ -26,7 +26,18 @@ namespace Restaurante
         );
 
             RepositorioCliente.Adicionar(clienteTeste);
-           
+            var EmpregadoTeste = new Empregado(
+                nome: "João da Silva",
+                cpf: "12345678901",
+                telefone: "21999998888",
+                endereco: "Avenida Brasil, 123, Rio De Janeiro, Brasil, Volta Redonda, Qualquer coisa",
+                datanascimento: new DateTime(1990, 5, 20),
+                especialidade: "Cozinheiro",
+                email: "Qualquercoisa@hotmail.com"
+                );
+            RepositorioEmpregado.Adicionar(EmpregadoTeste);
+
+
 
         }
 
@@ -109,14 +120,14 @@ namespace Restaurante
             }
             else
             {
-                // Aqui você pode adicionar a lógica para cadastrar o cliente
+                
                 var cliente = new Cliente(
                     nome: NomeInput.Text,
                     cpf: CPFInput.Text,
                     telefone: TelefoneInput.Text,
                     endereco: EnderecoInput.Text,
                     email: EmailInput.Text,
-                    dataNascimento: dateTimePicker1.Value // ou outra data que você queira usar
+                    dataNascimento: dateTimePicker1.Value 
                 );
                 RepositorioCliente.Adicionar(cliente);
                 MessageBox.Show("Cliente cadastrado com sucesso!");

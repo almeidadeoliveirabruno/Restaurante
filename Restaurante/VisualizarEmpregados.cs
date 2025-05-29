@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restaurante.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace Restaurante
         public VisualizarEmpregados()
         {
             InitializeComponent();
+            dataGridView1.DataSource = null; // limpa a origem anterior
+            dataGridView1.DataSource = (RepositorioEmpregado.Empregados);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+
         }
     }
 }

@@ -44,7 +44,7 @@
             this.NomeInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.FuncaoListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -101,6 +101,7 @@
             this.TelefoneInput.Size = new System.Drawing.Size(650, 75);
             this.TelefoneInput.TabIndex = 27;
             this.TelefoneInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.TelefoneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CamposNumericosApenas);
             this.TelefoneInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // Telefone
@@ -181,8 +182,8 @@
             this.CPFInput.Name = "CPFInput";
             this.CPFInput.Size = new System.Drawing.Size(650, 75);
             this.CPFInput.TabIndex = 19;
-            this.CPFInput.TextChanged += new System.EventHandler(this.CadastroCozinheiro_Load);
             this.CPFInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.CPFInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CamposNumericosApenas);
             this.CPFInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // NomeInput
@@ -215,15 +216,18 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Função";
             // 
-            // listBox1
+            // FuncaoListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(916, 834);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(280, 68);
-            this.listBox1.TabIndex = 33;
-            this.listBox1.Enter += new System.EventHandler(this.Input_Enter);
+            this.FuncaoListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FuncaoListBox.FormattingEnabled = true;
+            this.FuncaoListBox.ItemHeight = 46;
+            this.FuncaoListBox.Location = new System.Drawing.Point(913, 852);
+            this.FuncaoListBox.Name = "FuncaoListBox";
+            this.FuncaoListBox.ScrollAlwaysVisible = true;
+            this.FuncaoListBox.Size = new System.Drawing.Size(280, 50);
+            this.FuncaoListBox.TabIndex = 33;
+            this.FuncaoListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.FuncaoListBox.Enter += new System.EventHandler(this.Input_Enter);
             // 
             // label4
             // 
@@ -253,7 +257,7 @@
             this.ClientSize = new System.Drawing.Size(1839, 1055);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.FuncaoListBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.VisualizarClientes);
             this.Controls.Add(this.Cadastrar);
@@ -290,7 +294,7 @@
             this.Controls.SetChildIndex(this.Cadastrar, 0);
             this.Controls.SetChildIndex(this.VisualizarClientes, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.listBox1, 0);
+            this.Controls.SetChildIndex(this.FuncaoListBox, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
             this.ResumeLayout(false);
@@ -316,7 +320,7 @@
         private System.Windows.Forms.TextBox NomeInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox FuncaoListBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
     }

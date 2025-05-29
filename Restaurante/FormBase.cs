@@ -50,7 +50,30 @@ namespace Restaurante
 
         private void button4_Click(object sender, EventArgs e)
         {
+            CadastroItem cadastroPedido = new CadastroItem();
+            cadastroPedido.Show();
+            if (!(this is Form1))
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+            }
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VisualizarMesa visualizarMesa = new VisualizarMesa();
+            visualizarMesa.Show();
+            if (!(this is Form1))
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+            }
         }
     }
 }

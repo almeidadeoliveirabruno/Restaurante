@@ -8,12 +8,12 @@ namespace Restaurante.Models
 {
     public static class RepositorioEmpregado
     {
-        public static List<Empregado> Funcionarios { get; private set; } = new List<Empregado>();
+        public static List<Empregado> Empregados { get; private set; } = new List<Empregado>();
         static RepositorioEmpregado()
         {
             Adicionar(new Empregado(
                nome: "João da Silva",
-               cpf: "123.456.789-00",
+               cpf: "12345678900",
                telefone: "21999990000",
                endereco: "Rua A, 123",
                datanascimento: new DateTime(1990, 5, 10),
@@ -23,7 +23,7 @@ namespace Restaurante.Models
 
             Adicionar(new Empregado(
                 nome: "Maria Oliveira",
-                cpf: "987.654.321-00",
+                cpf: "98765432100",
                 telefone: "21988880000",
                 endereco: "Av. B, 456",
                 datanascimento: new DateTime(1985, 10, 22),
@@ -33,7 +33,7 @@ namespace Restaurante.Models
 
             Adicionar(new Empregado(
                 nome: "Carlos Souza",
-                cpf: "456.123.789-00",
+                cpf: "45612378900",
                 telefone: "21977770000",
                 endereco: "Travessa C, 789",
                 datanascimento: new DateTime(1995, 3, 18),
@@ -43,7 +43,7 @@ namespace Restaurante.Models
 
             Adicionar(new Empregado(
                 nome: "Ana Costa",
-                cpf: "321.987.654-00",
+                cpf: "32198765400",
                 telefone: "21966660000",
                 endereco: "Rua D, 101",
                 datanascimento: new DateTime(2000, 1, 5),
@@ -53,7 +53,7 @@ namespace Restaurante.Models
 
             Adicionar(new Empregado(
                 nome: "Pedro Santos",
-                cpf: "159.753.486-00",
+                cpf: "15975348600",
                 telefone: "21955550000",
                 endereco: "Alameda E, 202",
                 datanascimento: new DateTime(1988, 7, 30),
@@ -68,20 +68,20 @@ namespace Restaurante.Models
             {
                 return false; 
             }
-            Funcionarios.Add(f);
+            Empregados.Add(f);
             return true;
         }
 
         public static bool VerificaSeFuncionarioExiste(string cpf)
         {
-            if (Funcionarios.Any(funcionario => funcionario.Cpf == cpf))
+            if (Empregados.Any(funcionario => funcionario.Cpf == cpf))
             {
                 return true; 
             }
             return false;
         }
 
-        public static List<Empregado> ObterTodos() => Funcionarios;
+        public static List<Empregado> ObterTodos() => Empregados;
 
     }
 }

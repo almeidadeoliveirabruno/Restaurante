@@ -16,6 +16,10 @@ namespace Restaurante
         public CadastroEmpregados()
         {
             InitializeComponent();
+            FuncaoListBox.Items.Add("Cozinheiro");
+            FuncaoListBox.Items.Add("Garçom");
+            FuncaoListBox.Items.Add("Gerente");
+            FuncaoListBox.SelectedIndex = 0; // Seleciona o primeiro item
         }
 
         private void CadastroCozinheiro_Load(object sender, EventArgs e)
@@ -26,6 +30,18 @@ namespace Restaurante
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CamposNumericosApenas(object sender, KeyPressEventArgs e)
+        {
+            if (sender is TextBox texbox)
+            {
+                // Permite apenas números e o caractere de controle (Backspace)
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true; // Impede a entrada de caracteres inválidos
+                }
+            }
         }
 
         #region Focus
@@ -74,24 +90,23 @@ namespace Restaurante
                 EnderecoInput.Focus();
             }
 
-            else if (RepositorioCliente.VerificaSeClienteExiste(CPFInput.Text))
+            else if (RepositorioEmpregado.VerificaSeFuncionarioExiste(CPFInput.Text))
             {
-                MessageBox.Show("O cpf já exista.");
+                MessageBox.Show("O cpf já existe.");
                 CPFInput.Focus();
             }
             else
             {
-                //// Aqui você pode adicionar a lógica para cadastrar o cliente
-                //var empregado = new Empregado(
-                //    nome: NomeInput.Text,
-                //    cpf: CPFInput.Text,
-                //    telefone: TelefoneInput.Text,
-                //    endereco: EnderecoInput.Text,
-                //    email: EmailInput.Text,
-                //    dataNascimento: dateTimePicker1.Value // ou outra data que você queira usar
-                //);
-                //RepositorioEmpregado.Adicionar(empregado);
-                MessageBox.Show("Cliente cadastrado com sucesso!");
+                RepositorioEmpregado.Adicionar(new Empregado(
+                    nome: NomeInput.Text,
+                    cpf: CPFInput.Text,
+                    telefone: TelefoneInput.Text,
+                    endereco: EnderecoInput.Text,
+                    datanascimento: DateTime.Now, // Aqui você pode adicionar um campo de data de nascimento se necessário
+                    especialidade: FuncaoListBox.SelectedItem?.ToString() ?? "Não especificado",
+                    email: EmailInput.Text
+                ));
+                MessageBox.Show("Empregado cadastrado com sucesso!");
                 NomeInput.Clear();
                 CPFInput.Clear();
                 TelefoneInput.Clear();
@@ -112,6 +127,16 @@ namespace Restaurante
             {
                 this.Hide();
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CPFInput_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
