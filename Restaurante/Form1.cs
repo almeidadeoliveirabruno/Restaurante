@@ -16,29 +16,7 @@ namespace Restaurante
         public Form1()
         {
             InitializeComponent();
-            var clienteTeste = new Cliente(
-            nome: "Maria Oliveira Teixeira Paula",
-            cpf: "98765432100",
-            telefone: "21988887777",
-            endereco: "Rua das Flores, 456, Rio De Janeiro, Brasil, Volta Redonda, Qualquer coisa",
-            email: "maria@teste.com",
-            dataNascimento: new DateTime(1985, 3, 10)
-        );
-
-            RepositorioCliente.Adicionar(clienteTeste);
-            var EmpregadoTeste = new Empregado(
-                nome: "João da Silva",
-                cpf: "12345678901",
-                telefone: "21999998888",
-                endereco: "Avenida Brasil, 123, Rio De Janeiro, Brasil, Volta Redonda, Qualquer coisa",
-                datanascimento: new DateTime(1990, 5, 20),
-                especialidade: "Cozinheiro",
-                email: "Qualquercoisa@hotmail.com"
-                );
-            RepositorioEmpregado.Adicionar(EmpregadoTeste);
-
-
-
+    
         }
 
         private void Form1_Load(object sender, EventArgs e)

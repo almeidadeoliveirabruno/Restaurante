@@ -102,7 +102,7 @@ namespace Restaurante
                     cpf: CPFInput.Text,
                     telefone: TelefoneInput.Text,
                     endereco: EnderecoInput.Text,
-                    datanascimento: DateTime.Now, // Aqui você pode adicionar um campo de data de nascimento se necessário
+                    datanascimento: DateTime.Now, 
                     especialidade: FuncaoListBox.SelectedItem?.ToString() ?? "Não especificado",
                     email: EmailInput.Text
                 ));

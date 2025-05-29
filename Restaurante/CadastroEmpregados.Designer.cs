@@ -173,7 +173,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(349, 75);
             this.dateTimePicker1.TabIndex = 20;
-            this.dateTimePicker1.Value = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(1999, 1, 1, 0, 0, 0, 0);
             // 
             // CPFInput
             // 

@@ -10,7 +10,7 @@ namespace Restaurante.Models
     public class Cliente : Pessoa
     {
         public int ClienteID { get; private set; }
-        static int geradorClienteId {get; set; }
+        static int geradorClienteId { get; set; } = 1;
         public List <Pedidos> HistoricoPedidos { get; set; } = new List<Pedidos>();
         // e se criar cliente com o mesmo cpf?
 

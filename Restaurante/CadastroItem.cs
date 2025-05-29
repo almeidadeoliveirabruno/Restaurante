@@ -16,5 +16,35 @@ namespace Restaurante
         {
             InitializeComponent();
         }
+
+        private void TipoCombox_Validacao(object sender, EventArgs e)
+        {
+            if (!TipoComBox.Items.Contains(TipoComBox.Text))
+            {
+                MessageBox.Show("Escolha uma opção válida da lista!");
+                TipoComBox.Text = string.Empty;
+                TipoComBox.Focus();
+            }
+        }
+        private void TipoComBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TipoComBox.Text == "Bebida")
+            {
+                AlcoolcheckBox.Visible = true;
+            }
+            else if (TipoComBox.Text == "Prato")
+            {
+                AlcoolcheckBox.Visible = false;
+            }
+            else
+            {
+                AlcoolcheckBox.Visible = false;
+            }
+        }
+
+        private void TipoComBox_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
