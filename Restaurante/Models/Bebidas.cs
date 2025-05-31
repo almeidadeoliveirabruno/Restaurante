@@ -9,7 +9,7 @@ namespace Restaurante.Models
     public class Bebidas : IItens
     {
         public string Nome { get; set; }
-        public Boolean Alcool { get; private set; }
+        public Boolean Alcool { get; set; }
         public int Id { get; set; }
         public decimal Preco { get; set; }
         static int GeradorBebidaId { get; set; } = 0;

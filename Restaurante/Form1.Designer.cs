@@ -180,6 +180,7 @@ namespace Restaurante
             this.TelefoneInput.Name = "TelefoneInput";
             this.TelefoneInput.Size = new System.Drawing.Size(888, 75);
             this.TelefoneInput.TabIndex = 10;
+            this.TelefoneInput.TextChanged += new System.EventHandler(this.TelefoneInput_TextChanged);
             this.TelefoneInput.Enter += new System.EventHandler(this.TelefoneInput_Enter);
             this.TelefoneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.TelefoneInput.Leave += new System.EventHandler(this.TelefoneInput_Leave);

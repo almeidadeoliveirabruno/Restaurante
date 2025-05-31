@@ -198,5 +198,10 @@ namespace Restaurante
         {
 
         }
+
+        private void TelefoneInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

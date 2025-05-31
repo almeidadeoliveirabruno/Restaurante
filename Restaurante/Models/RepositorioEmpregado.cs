@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Restaurante.Models
 {
     public static class RepositorioEmpregado
     {
-        public static List<Empregado> Empregados { get; private set; } = new List<Empregado>();
+        public static BindingList<Empregado> Empregados { get; private set; } = new BindingList<Empregado>();
         static RepositorioEmpregado()
         {
             Adicionar(new Empregado(
@@ -81,7 +82,7 @@ namespace Restaurante.Models
             return false;
         }
 
-        public static List<Empregado> ObterTodos() => Empregados;
+        public static BindingList<Empregado> ObterTodos() => Empregados;
 
     }
 }

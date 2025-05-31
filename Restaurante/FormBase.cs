@@ -23,7 +23,7 @@ namespace Restaurante
         {
             MostrarClientes mostrarClientes = new MostrarClientes();
             mostrarClientes.Show();
-            if (!(this is Form1))
+            if (!(this is TelaPrincipal))
             {
                 this.Close();
             }
@@ -38,7 +38,7 @@ namespace Restaurante
         {
             CadastroEmpregados cadastroCozinheiro = new CadastroEmpregados();
             cadastroCozinheiro.Show();
-            if (!(this is Form1))
+            if (!(this is TelaPrincipal))
             {
                 this.Close();
             }
@@ -52,7 +52,7 @@ namespace Restaurante
         {
             CadastroItem cadastroPedido = new CadastroItem();
             cadastroPedido.Show();
-            if (!(this is Form1))
+            if (!(this is TelaPrincipal))
             {
                 this.Close();
             }
@@ -66,7 +66,7 @@ namespace Restaurante
         {
             VisualizarMesa visualizarMesa = new VisualizarMesa();
             visualizarMesa.Show();
-            if (!(this is Form1))
+            if (!(this is TelaPrincipal))
             {
                 this.Close();
             }

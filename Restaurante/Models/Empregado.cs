@@ -9,7 +9,7 @@ namespace Restaurante.Models
     public class Empregado: Pessoa
     {
         public int IdEmpregado { get; private set; }
-        static int GeradorEmpregadoId { get; set; } = 0;
+        static int GeradorEmpregadoId { get; set; } = 1;
         public string Especialidade { get; private set; }
         public int TrabalhoEmNPedidos { get; private set; }
 
