@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -147,11 +149,12 @@ namespace Restaurante
                         NomeInput.Focus();
                         return;
                     }
+                    string caminho = Path.Combine(Application.StartupPath, "Resources", "Hamburguer125125.png");
                     RepositorioPratos.AdicionarPrato(new Pratos(
                         NomeInput.Text,
                         Decimal.Parse(PrecoInput.Text),
-                        int.Parse(TempoEstimadoInput.Text)
-                    ));
+                        int.Parse(TempoEstimadoInput.Text),
+                        caminho));
                     MessageBox.Show("Item cadastrado com sucesso!");
                     NomeInput.Clear();
                     PrecoInput.Clear();

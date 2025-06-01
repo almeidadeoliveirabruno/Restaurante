@@ -14,12 +14,14 @@ namespace Restaurante.Models
         static int GeradorPratoId { get; set; } = 1;
         public TimeSpan TempoPreparo { get; private set; }
         public int Quantidade { get; set; } = 0;
-        public Pratos(string nome, decimal preco, int minutos)
+        public string CaminhoImagem { get; set; }
+        public Pratos(string nome, decimal preco, int minutos, string caminhoImagem)
         {
             Nome = nome;
             Preco = preco;
             Id = GeradorPratoId;
             GeradorPratoId++;
+            CaminhoImagem = caminhoImagem;
             TempoPreparo = TimeSpan.FromMinutes(minutos);
         }
     }

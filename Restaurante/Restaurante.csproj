@@ -209,5 +209,10 @@
   <ItemGroup>
     <None Include="Resources\CocaCola125125.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Hamburguer125125.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

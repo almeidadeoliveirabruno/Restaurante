@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanelPedidos = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelBebidas = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelComidas = new System.Windows.Forms.FlowLayoutPanel();
             this.TotalCusto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelPedidos
+            // flowLayoutPanelBebidas
             // 
-            this.flowLayoutPanelPedidos.AutoScroll = true;
-            this.flowLayoutPanelPedidos.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanelPedidos.Location = new System.Drawing.Point(456, 538);
-            this.flowLayoutPanelPedidos.Name = "flowLayoutPanelPedidos";
-            this.flowLayoutPanelPedidos.Size = new System.Drawing.Size(1221, 294);
-            this.flowLayoutPanelPedidos.TabIndex = 17;
+            this.flowLayoutPanelBebidas.AutoScroll = true;
+            this.flowLayoutPanelBebidas.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.flowLayoutPanelBebidas.Location = new System.Drawing.Point(456, 538);
+            this.flowLayoutPanelBebidas.Name = "flowLayoutPanelBebidas";
+            this.flowLayoutPanelBebidas.Size = new System.Drawing.Size(1221, 294);
+            this.flowLayoutPanelBebidas.TabIndex = 17;
             // 
             // label1
             // 
@@ -64,14 +64,14 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Bebidas";
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanelComidas
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(443, 123);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1221, 294);
-            this.flowLayoutPanel1.TabIndex = 18;
+            this.flowLayoutPanelComidas.AutoScroll = true;
+            this.flowLayoutPanelComidas.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.flowLayoutPanelComidas.Location = new System.Drawing.Point(443, 123);
+            this.flowLayoutPanelComidas.Name = "flowLayoutPanelComidas";
+            this.flowLayoutPanelComidas.Size = new System.Drawing.Size(1221, 294);
+            this.flowLayoutPanelComidas.TabIndex = 18;
             // 
             // TotalCusto
             // 
@@ -90,18 +90,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.TotalCusto);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanelComidas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanelPedidos);
+            this.Controls.Add(this.flowLayoutPanelBebidas);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "RealizarPedidocs";
             this.Text = "RealizarPedidocs";
             this.Load += new System.EventHandler(this.RealizarPedidocs_Load);
-            this.Controls.SetChildIndex(this.flowLayoutPanelPedidos, 0);
+            this.Controls.SetChildIndex(this.flowLayoutPanelBebidas, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.flowLayoutPanelComidas, 0);
             this.Controls.SetChildIndex(this.TotalCusto, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,10 +110,10 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPedidos;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelBebidas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelComidas;
         private System.Windows.Forms.Label TotalCusto;
     }
 }
