@@ -59,14 +59,14 @@ namespace Restaurante
         {
             VisualizarMesa visualizarMesa = new VisualizarMesa();
             visualizarMesa.Show();
-            if (!(this is TelaPrincipal))
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-            }
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RealizarPedidocs realizarPedido = new RealizarPedidocs();
+            realizarPedido.Show();
+            this.Close();
         }
     }
 }

@@ -11,5 +11,6 @@ namespace Restaurante.Models
         string Nome { get; set; }
         int Id { get; set; }
         decimal Preco { get; set; }
+        int Quantidade { get; set; }
     }
 }

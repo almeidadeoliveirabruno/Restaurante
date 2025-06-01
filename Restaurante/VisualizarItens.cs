@@ -20,12 +20,14 @@ namespace Restaurante
             dataGridView1.DataSource = (RepositorioBebidas.Bebidas);
             dataGridView1.ReadOnly = true;
             dataGridView1.Columns["Id"].DisplayIndex = 0;
+            dataGridView1.Columns["Quantidade"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
             dataGridView2.ReadOnly = true;
             dataGridView2.DataSource = null; // limpa a origem anterior
             dataGridView2.DataSource = (RepositorioPratos.Pratos);
+            dataGridView2.Columns["Quantidade"].Visible = false;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

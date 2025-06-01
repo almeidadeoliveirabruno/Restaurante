@@ -13,6 +13,7 @@ namespace Restaurante.Models
         public decimal Preco { get; set; }
         static int GeradorPratoId { get; set; } = 1;
         public TimeSpan TempoPreparo { get; private set; }
+        public int Quantidade { get; set; } = 0;
         public Pratos(string nome, decimal preco, int minutos)
         {
             Nome = nome;

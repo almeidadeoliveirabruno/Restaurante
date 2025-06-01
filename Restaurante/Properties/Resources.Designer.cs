@@ -63,6 +63,26 @@ namespace Restaurante.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CocaCola125125 {
+            get {
+                object obj = ResourceManager.GetObject("CocaCola125125", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CocaCola150150 {
+            get {
+                object obj = ResourceManager.GetObject("CocaCola150150", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Restaurante_Stack_Overplate {
             get {
                 object obj = ResourceManager.GetObject("Logo Restaurante Stack Overplate", resourceCulture);

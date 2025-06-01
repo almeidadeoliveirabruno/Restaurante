@@ -12,6 +12,7 @@ namespace Restaurante.Models
         public Boolean Alcool { get;  set; }
         public int Id { get; set; }
         public decimal Preco { get;  set; }
+        public int Quantidade { get; set; } = 0;
         static int GeradorBebidaId { get;  set; } = 1;
 
         public Bebidas(string nome, decimal preco, Boolean alcool)

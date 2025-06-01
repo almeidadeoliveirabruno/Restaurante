@@ -16,6 +16,9 @@ namespace Restaurante.Models
             Bebidas.Add(new Bebidas("Cerveja", 8.00m, true));
             Bebidas.Add(new Bebidas("Suco de Laranja", 6.00m, false));
             Bebidas.Add(new Bebidas("Vinho Tinto", 50.00m, true));
+            Bebidas.Add(new Bebidas("Água Mineral", 3.00m, false));
+            Bebidas.Add(new Bebidas("Refrigerante Diet", 5.50m, false));
+            Bebidas.Add(new Bebidas("Whisky", 100.00m, true));
         }
         static public void AdicionarBebida(Bebidas bebida)
         {
