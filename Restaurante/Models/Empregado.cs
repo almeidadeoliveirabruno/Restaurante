@@ -10,13 +10,15 @@ namespace Restaurante.Models
     {
         public int IdEmpregado { get; private set; }
         static int GeradorEmpregadoId { get; set; } = 1;
-        public string Especialidade { get; private set; }
-        public int TrabalhoEmNPedidos { get; private set; }
+        public string FuncaoEmpregado { get; private set; }
+        public decimal Salario { get; set; }
 
-        public Empregado(string nome, string cpf, string telefone, string endereco, DateTime datanascimento, string especialidade, string email) : base(nome, cpf, telefone, endereco, datanascimento, email)
+
+        public Empregado(string nome, string cpf, string telefone, string endereco, DateTime datanascimento, string funcaoEmpregado, string email, decimal salario) : base(nome, cpf, telefone, endereco, datanascimento, email)
         {
-            Especialidade = especialidade;
+            FuncaoEmpregado = funcaoEmpregado;
             IdEmpregado = GeradorEmpregadoId;
+            Salario = salario;
             GeradorEmpregadoId++;
         }
 

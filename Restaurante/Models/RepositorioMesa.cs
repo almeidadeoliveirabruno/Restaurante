@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,8 @@ namespace Restaurante.Models
 {
     static class RepositorioMesa
     {
-        public static List<Mesa> Mesas { get; private set; } = new List<Mesa>();
+        public static BindingList<Mesa> Mesas { get; private set; } = new BindingList<Mesa>();
+       
         static RepositorioMesa()
         {
             Adicionar(new Mesa());
@@ -17,7 +19,19 @@ namespace Restaurante.Models
         }
         public static void Adicionar(Mesa mesa)
         {
-            Mesas.Add(mesa);
+            if (Mesas.Count <= 9)
+            {
+                Mesas.Add(mesa);
+            }
+        }
+            
+
+        public static void remover(Mesa mesa)
+        {
+            if (Mesas.Count > 0)
+            {
+                Mesas.RemoveAt(Mesas.Count - 1);
+            }
         }
     }
 }

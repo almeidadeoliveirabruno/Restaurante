@@ -9,18 +9,19 @@ namespace Restaurante.Models
 {
     public static class RepositorioEmpregado
     {
-        public static BindingList<Empregado> Empregados { get; private set; } = new BindingList<Empregado>();
+        public static List<Empregado> Empregados { get; private set; } = new List<Empregado>();
         static RepositorioEmpregado()
         {
             Adicionar(new Empregado(
-               nome: "João da Silva",
-               cpf: "12345678900",
-               telefone: "21999990000",
-               endereco: "Rua A, 123",
-               datanascimento: new DateTime(1990, 5, 10),
-               especialidade: "Grelhados",
-               email: "joao.silva@example.com"
-           ));
+    nome: "João da Silva",
+    cpf: "12345678900",
+    telefone: "21999990000",
+    endereco: "Rua A, 123",
+    datanascimento: new DateTime(1990, 5, 10),
+    funcaoEmpregado: "Cozinheiro",
+    email: "joao.silva@example.com",
+    salario: 3000.00m
+));
 
             Adicionar(new Empregado(
                 nome: "Maria Oliveira",
@@ -28,8 +29,9 @@ namespace Restaurante.Models
                 telefone: "21988880000",
                 endereco: "Av. B, 456",
                 datanascimento: new DateTime(1985, 10, 22),
-                especialidade: "Massas",
-                email: "maria.oliveira@example.com"
+                funcaoEmpregado: "Garçom",
+                email: "maria.oliveira@example.com",
+                salario: 2000.00m
             ));
 
             Adicionar(new Empregado(
@@ -38,8 +40,9 @@ namespace Restaurante.Models
                 telefone: "21977770000",
                 endereco: "Travessa C, 789",
                 datanascimento: new DateTime(1995, 3, 18),
-                especialidade: "Sushis",
-                email: "carlos.souza@example.com"
+                funcaoEmpregado: "Caixa",
+                email: "carlos.souza@example.com",
+                salario: 2500.00m
             ));
 
             Adicionar(new Empregado(
@@ -48,8 +51,9 @@ namespace Restaurante.Models
                 telefone: "21966660000",
                 endereco: "Rua D, 101",
                 datanascimento: new DateTime(2000, 1, 5),
-                especialidade: "Doces",
-                email: "ana.costa@example.com"
+                funcaoEmpregado: "Gerente",
+                email: "ana.costa@example.com",
+                salario: 5000.00m
             ));
 
             Adicionar(new Empregado(
@@ -58,11 +62,13 @@ namespace Restaurante.Models
                 telefone: "21955550000",
                 endereco: "Alameda E, 202",
                 datanascimento: new DateTime(1988, 7, 30),
-                especialidade: "Pizzas",
-                email: "pedro.santos@example.com"
+                funcaoEmpregado: "Chef",
+                email: "pedro.santos@example.com",
+                salario: 4000.00m
             ));
+
         }
-        
+
         public static bool Adicionar(Empregado f)
         {
             if (VerificaSeFuncionarioExiste(f.Cpf))
@@ -82,7 +88,7 @@ namespace Restaurante.Models
             return false;
         }
 
-        public static BindingList<Empregado> ObterTodos() => Empregados;
+        public static List<Empregado> ObterTodos() => Empregados;
 
     }
 }

@@ -16,9 +16,6 @@ namespace Restaurante
         public CadastroEmpregados()
         {
             InitializeComponent();
-            FuncaoListBox.Items.Add("Cozinheiro");
-            FuncaoListBox.Items.Add("Garçom");
-            FuncaoListBox.Items.Add("Gerente");
             FuncaoListBox.SelectedIndex = 0; // Seleciona o primeiro item
         }
 
@@ -94,18 +91,29 @@ namespace Restaurante
             {
                 MessageBox.Show("O cpf já existe.");
                 CPFInput.Focus();
-            }
+            } 
             else
             {
+                try
+                {
+                     Decimal.Parse(SalarioInput.Text);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("O campo Salário deve conter apenas números.");
+                    SalarioInput.Focus();
+                    return;
+                }
                 RepositorioEmpregado.Adicionar(new Empregado(
                     nome: NomeInput.Text,
                     cpf: CPFInput.Text,
                     telefone: TelefoneInput.Text,
                     endereco: EnderecoInput.Text,
-                    datanascimento: DateTime.Now, 
-                    especialidade: FuncaoListBox.SelectedItem?.ToString() ?? "Não especificado",
-                    email: EmailInput.Text
-                ));
+                    datanascimento: DateTime.Now,
+                    funcaoEmpregado: FuncaoListBox.SelectedItem?.ToString() ?? "Não especificado",
+                    email: EmailInput.Text,
+                    salario: Decimal.Parse(SalarioInput.Text))
+                );
                 MessageBox.Show("Empregado cadastrado com sucesso!");
                 NomeInput.Clear();
                 CPFInput.Clear();
@@ -129,14 +137,28 @@ namespace Restaurante
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void CPFInput_KeyUp(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void ValidacaoDinheiro(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+
+            // Permite apenas números, vírgula e backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+
+            // Evita múltiplas vírgulas
+            if (e.KeyChar == ',' && txt.Text.Contains(","))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

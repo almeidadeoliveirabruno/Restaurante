@@ -62,9 +62,16 @@ namespace Restaurante
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void AdicionarMesa(object sender, EventArgs e)
         {
+            RepositorioMesa.Adicionar(new Mesa());
+            ExibirMesasDinamicamente();
+        }
 
+        private void RemoverMesa(object sender, EventArgs e)
+        {
+            RepositorioMesa.remover(new Mesa());
+            ExibirMesasDinamicamente();
         }
     }
 }

@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.FuncaoListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SalarioInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // VisualizarClientes
@@ -221,12 +221,17 @@
             this.FuncaoListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FuncaoListBox.FormattingEnabled = true;
             this.FuncaoListBox.ItemHeight = 46;
+            this.FuncaoListBox.Items.AddRange(new object[] {
+            "Garçom",
+            "Chef",
+            "Cozinheiro",
+            "Caixa",
+            "Gerente"});
             this.FuncaoListBox.Location = new System.Drawing.Point(913, 852);
             this.FuncaoListBox.Name = "FuncaoListBox";
             this.FuncaoListBox.ScrollAlwaysVisible = true;
             this.FuncaoListBox.Size = new System.Drawing.Size(280, 50);
             this.FuncaoListBox.TabIndex = 33;
-            this.FuncaoListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.FuncaoListBox.Enter += new System.EventHandler(this.Input_Enter);
             // 
             // label4
@@ -239,23 +244,24 @@
             this.label4.TabIndex = 34;
             this.label4.Text = "Salário";
             // 
-            // textBox1
+            // SalarioInput
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1557, 821);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 75);
-            this.textBox1.TabIndex = 35;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.Input_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.Input_Leave);
+            this.SalarioInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalarioInput.Location = new System.Drawing.Point(1557, 821);
+            this.SalarioInput.Name = "SalarioInput";
+            this.SalarioInput.Size = new System.Drawing.Size(280, 75);
+            this.SalarioInput.TabIndex = 35;
+            this.SalarioInput.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.SalarioInput.Enter += new System.EventHandler(this.Input_Enter);
+            this.SalarioInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacaoDinheiro);
+            this.SalarioInput.Leave += new System.EventHandler(this.Input_Leave);
             // 
             // CadastroEmpregados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1839, 1055);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SalarioInput);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.FuncaoListBox);
             this.Controls.Add(this.label3);
@@ -296,7 +302,7 @@
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.FuncaoListBox, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.SalarioInput, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,6 +328,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox FuncaoListBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SalarioInput;
     }
 }

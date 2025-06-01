@@ -12,7 +12,7 @@ namespace Restaurante.Models
         public int ClienteID { get; private set; }
         static int geradorClienteId { get; set; } = 1;
         public List <Pedidos> HistoricoPedidos { get; set; } = new List<Pedidos>();
-        // e se criar cliente com o mesmo cpf?
+        
 
         public Cliente( string nome, string cpf, string telefone, string endereco, string email, DateTime dataNascimento)
          : base(nome, cpf, telefone, endereco, dataNascimento,email)
