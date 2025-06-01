@@ -29,37 +29,48 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Iniciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(608, 213);
+            this.pictureBox1.Image = global::Restaurante.Properties.Resources.Logo_Restaurante_Stack_Overplate;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(990, 455);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Iniciar
+            // 
+            this.Iniciar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Iniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Iniciar.Location = new System.Drawing.Point(1393, 470);
+            this.Iniciar.Name = "Iniciar";
+            this.Iniciar.Size = new System.Drawing.Size(350, 150);
+            this.Iniciar.TabIndex = 33;
+            this.Iniciar.Text = "Iniciar ";
+            this.Iniciar.UseVisualStyleBackColor = false;
+            this.Iniciar.Click += new System.EventHandler(this.Iniciar_Click);
             // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1924, 1033);
+            this.Controls.Add(this.Iniciar);
             this.Controls.Add(this.pictureBox1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "TelaPrincipal";
             this.Text = "TelaPrincipal";
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Iniciar;
     }
 }

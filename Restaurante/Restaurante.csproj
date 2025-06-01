@@ -56,11 +56,11 @@
     <Compile Include="CadastroEmpregados.Designer.cs">
       <DependentUpon>CadastroEmpregados.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastroItem.cs">
+    <Compile Include="CadastroItens.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroItem.Designer.cs">
-      <DependentUpon>CadastroItem.cs</DependentUpon>
+    <Compile Include="CadastroItens.Designer.cs">
+      <DependentUpon>CadastroItens.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -108,6 +108,12 @@
     <Compile Include="VisualizarEmpregados.Designer.cs">
       <DependentUpon>VisualizarEmpregados.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisualizarItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarItens.Designer.cs">
+      <DependentUpon>VisualizarItens.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisualizarMesa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +123,8 @@
     <EmbeddedResource Include="CadastroEmpregados.resx">
       <DependentUpon>CadastroEmpregados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastroItem.resx">
-      <DependentUpon>CadastroItem.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroItens.resx">
+      <DependentUpon>CadastroItens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -137,12 +143,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarEmpregados.resx">
       <DependentUpon>VisualizarEmpregados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarItens.resx">
+      <DependentUpon>VisualizarItens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarMesa.resx">
       <DependentUpon>VisualizarMesa.cs</DependentUpon>
@@ -162,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Restaurante Stack Overplate.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

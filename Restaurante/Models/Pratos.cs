@@ -11,8 +11,8 @@ namespace Restaurante.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public decimal Preco { get; set; }
-        static int GeradorPratoId { get; set; } = 0;
-        private TimeSpan TempoPreparo { get; set; }
+        static int GeradorPratoId { get; set; } = 1;
+        public TimeSpan TempoPreparo { get; private set; }
         public Pratos(string nome, decimal preco, int minutos)
         {
             Nome = nome;

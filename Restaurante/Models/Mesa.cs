@@ -10,14 +10,7 @@ namespace Restaurante.Models
     {
         public int Id { get; set; }
         public static int GeradorId { get; set; } = 1;
-        public int Capacidade { get; set; }
-        public bool Ocupada { get; set; }
-        public Mesa( int capacidade, bool ocupada)
-        {
-            Id = GeradorId;
-            GeradorId++;
-            Capacidade = capacidade;
-            Ocupada = ocupada;
-        }
+        public bool Ocupada { get; set; } = false;
+      
     }
 }

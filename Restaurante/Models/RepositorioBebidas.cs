@@ -8,9 +8,7 @@ namespace Restaurante.Models
 {
     static class RepositorioBebidas
     {
-        static public int Id { get; set; }
         static public List<Bebidas> Bebidas { get; set; } = new List<Bebidas>();
-        static int GeradorBebidaId { get; set; } = 1;
         static RepositorioBebidas()
         {
             // Adiciona bebidas iniciais ao repositório
@@ -23,7 +21,6 @@ namespace Restaurante.Models
         {
             if (!VerificarseExiste(bebida.Nome))
             {
-                bebida.Id = GeradorBebidaId++;
                 Bebidas.Add(bebida);
             }
         }

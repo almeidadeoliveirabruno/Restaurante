@@ -50,16 +50,9 @@ namespace Restaurante
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CadastroItem cadastroPedido = new CadastroItem();
-            cadastroPedido.Show();
-            if (!(this is TelaPrincipal))
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-            }
+            VisualizarItens visualizarPedido = new VisualizarItens();
+            visualizarPedido.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)

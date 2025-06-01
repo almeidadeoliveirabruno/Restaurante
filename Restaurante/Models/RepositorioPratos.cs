@@ -8,29 +8,39 @@ namespace Restaurante.Models
 {
     static class RepositorioPratos
     {
-        private static List<Pratos> pratos = new List<Pratos>();
+        public static List<Pratos> Pratos = new List<Pratos>();
+        static RepositorioPratos()
+        {
+            // Adicionando um prato de exemplo
+            var pratoTeste = new Pratos(
+                nome: "Feijoada",
+                preco: 45.00m,
+                minutos: 60
+            );
+            AdicionarPrato(pratoTeste);
+        }
         public static void AdicionarPrato(Pratos prato)
         {
-            pratos.Add(prato);
+            Pratos.Add(prato);
         }
         public static bool VerificarSeExiste(string nome)
         {
-            return pratos.Any(i => i.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+            return Pratos.Any(i => i.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
         }
         public static List<Pratos> ObterTodosPratos()
         {
-            return pratos;
+            return Pratos;
         }
         public static Pratos ObterPratoPorId(int id)
         {
-            return pratos.FirstOrDefault(p => p.Id == id);
+            return Pratos.FirstOrDefault(p => p.Id == id);
         }
         public static void RemoverPrato(int id)
         {
             var prato = ObterPratoPorId(id);
             if (prato != null)
             {
-                pratos.Remove(prato);
+                Pratos.Remove(prato);
             }
         }
     }

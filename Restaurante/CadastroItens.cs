@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class CadastroItem: FormBase
+    public partial class CadastroItens: FormBase
     {
-        public CadastroItem()
+        public CadastroItens()
         {
             InitializeComponent();
         }
@@ -59,13 +59,13 @@ namespace Restaurante
             TextBox txt = sender as TextBox;
 
             // Permite apenas números, vírgula e backspace
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
 
             // Evita múltiplas vírgulas
-            if (e.KeyChar == '.' && txt.Text.Contains("."))
+            if (e.KeyChar == ',' && txt.Text.Contains(","))
             {
                 e.Handled = true;
             }
@@ -161,12 +161,15 @@ namespace Restaurante
                 {
                     MessageBox.Show("Tipo de item inválido.");
                 }
-                if (TipoComBox.Text == "Comida")
-                {
-                    
-                }
             }
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            VisualizarItens visualizarItens = new VisualizarItens();
+            visualizarItens.Show();
+            this.Close();
         }
     }
 }

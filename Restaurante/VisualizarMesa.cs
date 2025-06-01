@@ -22,11 +22,12 @@ namespace Restaurante
         private void ExibirMesasDinamicamente()
         {
             flowLayoutPanelMesas.Controls.Clear();
-
+            int numero = 1;
             foreach (var mesa in RepositorioMesa.Mesas)
             {
                 Button btn = new Button();
-                btn.Text = $"Mesa {mesa.Id}";
+                btn.Text = $"Mesa {numero}";
+                numero++;
                 btn.Width = 150;
                 btn.Height = 180;
                 btn.Tag = mesa;
@@ -47,6 +48,21 @@ namespace Restaurante
         }
 
         private void PainelMesas_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VisualizarMesa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
