@@ -93,7 +93,7 @@ namespace Restaurante
            
             else if (RepositorioCliente.VerificaSeClienteExiste(CPFInput.Text))
             {
-                MessageBox.Show("O cpf já exista.");
+                MessageBox.Show("O cpf já existe!");
                 CPFInput.Focus();
             }
             else

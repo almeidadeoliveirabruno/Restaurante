@@ -19,6 +19,10 @@ namespace Restaurante
             dataGridView1.DataSource = null; // limpa a origem anterior
             dataGridView1.DataSource = (RepositorioEmpregado.Empregados);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.ReadOnly = false;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.MultiSelect = false;
 
 
         }

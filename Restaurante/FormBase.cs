@@ -50,7 +50,7 @@ namespace Restaurante
 
         private void button5_Click(object sender, EventArgs e)
         {
-            RealizarPedidocs realizarPedido = new RealizarPedidocs();
+            RealizarPedido realizarPedido = new RealizarPedido();
             realizarPedido.Show();
             this.Close();
         }

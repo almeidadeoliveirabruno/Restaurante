@@ -10,9 +10,9 @@ namespace Restaurante.Models
 {
     static class RepositorioPedidos
     {
-        public static List<Pedidos> PedidosRealizados { get; set; } = new List<Pedidos>() ;
+        public static BindingList<Pedido> PedidosRealizados { get; set; } = new BindingList<Pedido>() ;
         
-        public static void AdicionarPedidos(Pedidos pedido)
+        public static void AdicionarPedidos(Pedido pedido)
         {
             PedidosRealizados.Add(pedido);
         }

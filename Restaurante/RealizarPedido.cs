@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class RealizarPedidocs : FormBase
+    public partial class RealizarPedido : FormBase
     {
         private Dictionary<int, int> pedidoAtualBebida = new Dictionary<int, int>();
         private Dictionary<int, int> pedidoAtualComida = new Dictionary<int, int>();
         public List<Pratos> ListaPratos = new List<Pratos>();
         public List<Bebidas> ListaBebidas = new List<Bebidas>();
 
-        public RealizarPedidocs()
+        public RealizarPedido()
         {
             InitializeComponent();
         }
@@ -104,8 +104,9 @@ namespace Restaurante
                     var comida = RepositorioPratos.Pratos.FirstOrDefault(c => c.Id == id);
                     if (comida != null)
                     {
-                        comida.Quantidade = quantidade; // Define a quantidade inicial
-                        ListaPratos.Add(comida);
+                        var clone = comida.Clone();  // <-- Clonando aqui
+                        clone.Quantidade = quantidade; // Define a quantidade inicial no clone
+                        ListaPratos.Add(clone);
                     }
                 }
                 else
@@ -137,8 +138,9 @@ namespace Restaurante
                     var bebida = RepositorioBebidas.Bebidas.FirstOrDefault(b => b.Id == id);
                     if (bebida != null)
                     {
-                        bebida.Quantidade = quantidade; // Define a quantidade inicial
-                        ListaBebidas.Add(bebida);
+                        var clone = bebida.Clone();
+                        clone.Quantidade = quantidade; // Define a quantidade inicial
+                        ListaBebidas.Add(clone);
                     }
                 }
                 else
@@ -175,14 +177,20 @@ namespace Restaurante
                 return;
             }
 
+            var clienteSelecionado = (Cliente)ClientesComBox.SelectedItem;
+            if (clienteSelecionado.Idade < 18 && ListaBebidas.Any(b => b.Alcool == true))
+            {
+                MessageBox.Show($"O cliente {clienteSelecionado.Nome} é menor de idade e não pode consumir álcool.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var dialogResult = MessageBox.Show("Deseja finalizar o pedido?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                var clienteSelecionado = (Cliente)ClientesComBox.SelectedItem;
+               
 
-                
                 Mesa mesaSelecionada = (Mesa)MesaCombox.SelectedItem;
-                Pedidos pedidos = new Pedidos(clienteSelecionado, ListaPratos, ListaBebidas, mesaSelecionada);
+                Pedido pedidos = new Pedido(clienteSelecionado, ListaPratos, ListaBebidas, mesaSelecionada);
                 pedidos.CalcularPrecoTotal();
                 RepositorioPedidos.AdicionarPedidos(pedidos);
 

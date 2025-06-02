@@ -28,37 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PedidosDataGrid = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.PedidosDataGrid)).BeginInit();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // PedidosDataGrid
+            // flowLayoutPanel1
             // 
-            this.PedidosDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PedidosDataGrid.Location = new System.Drawing.Point(531, 50);
-            this.PedidosDataGrid.Name = "PedidosDataGrid";
-            this.PedidosDataGrid.RowHeadersWidth = 51;
-            this.PedidosDataGrid.RowTemplate.Height = 24;
-            this.PedidosDataGrid.Size = new System.Drawing.Size(780, 426);
-            this.PedidosDataGrid.TabIndex = 0;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(57, 44);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1740, 818);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1113, 406);
+            this.dataGridView1.TabIndex = 0;
             // 
             // VisualizarPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.PedidosDataGrid);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "VisualizarPedidos";
             this.Text = "VisualizarPedidos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.VisualizarPedidos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PedidosDataGrid)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView PedidosDataGrid;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

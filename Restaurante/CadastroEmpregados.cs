@@ -127,14 +127,7 @@ namespace Restaurante
         {
             VisualizarEmpregados visualizarEmpregados = new VisualizarEmpregados();
             visualizarEmpregados.Show();
-            if (!(this is CadastroCliente))
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-            }
+            this.Close();
         }
 
        

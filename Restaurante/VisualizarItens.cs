@@ -21,6 +21,7 @@ namespace Restaurante
             dataGridView1.ReadOnly = true;
             dataGridView1.Columns["Id"].DisplayIndex = 0;
             dataGridView1.Columns["Quantidade"].Visible = false;
+            dataGridView1.Columns["CaminhoImagem"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
@@ -38,5 +39,7 @@ namespace Restaurante
             cadastroItem.Show();
             this.Close();
         }
+
+
     }
 }

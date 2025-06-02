@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurante.Models
 {
-    public class Pedidos
+    public class Pedido
     {
         public enum StatusPedido
         {
@@ -20,11 +20,11 @@ namespace Restaurante.Models
         public DateTime DataHoraPedido { get; set; } = DateTime.Now;
         public StatusPedido status { get; set; } = StatusPedido.EmAndamento;   
         public decimal PrecoTotal { get; set; }
-        public Cliente Cliente { get; set; }
+        public Cliente Cliente { get; set; } 
         public List<Pratos> ItensPratos { get; set; } = new List<Pratos>();
         public List<Bebidas> ItensBebidas { get; set; } = new List<Bebidas>();
         public Mesa Mesa { get; set; }
-        public Pedidos(Cliente cliente, List<Pratos> prato, List<Bebidas> bebida, Mesa mesa)
+        public Pedido(Cliente cliente, List<Pratos> prato, List<Bebidas> bebida, Mesa mesa)
         {
             Id = GeradorPedidoId++;
             Cliente = cliente;
@@ -43,5 +43,8 @@ namespace Restaurante.Models
             PrecoTotal = ItensPratos.Sum(p => p.Preco * p.Quantidade) + ItensBebidas.Sum(b => b.Preco * b.Quantidade);
         }
     }
-    
+
+    public class Class1
+    {
+    }
 }

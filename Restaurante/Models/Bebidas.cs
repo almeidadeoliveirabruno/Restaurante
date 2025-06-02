@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,22 @@ namespace Restaurante.Models
             Id = GeradorBebidaId;
             GeradorBebidaId++;
             CaminhoImagem = caminhoImagem;
+        }
+
+        private Bebidas(int id, string nome, decimal preco,bool alcool, string caminhoImagem)
+        {
+            Id = id;
+            Nome = nome;
+            Alcool = alcool;
+            Preco = preco;
+            CaminhoImagem = caminhoImagem;
+        }
+
+        public Bebidas Clone()
+        {
+            var clone = new Bebidas(this.Id,this.Nome, this.Preco,this.Alcool, this.CaminhoImagem);
+            clone.Quantidade = this.Quantidade;
+            return clone;
         }
     }
 

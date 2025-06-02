@@ -24,5 +24,22 @@ namespace Restaurante.Models
             CaminhoImagem = caminhoImagem;
             TempoPreparo = TimeSpan.FromMinutes(minutos);
         }
+
+        public Pratos(int id, string nome, decimal preco, int minutos, string caminhoImagem)
+        {
+            Id = id;
+            Nome = nome;
+            Preco = preco;
+            CaminhoImagem = caminhoImagem;
+            TempoPreparo = TimeSpan.FromMinutes(minutos);
+        }
+
+        public Pratos Clone()
+        {
+            var clone = new Pratos(this.Id,this.Nome, this.Preco, (int)this.TempoPreparo.TotalMinutes, this.CaminhoImagem);
+            clone.Quantidade = this.Quantidade;
+            return clone;
+        }
+
     }
 }

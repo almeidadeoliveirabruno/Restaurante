@@ -16,13 +16,12 @@ namespace Restaurante
         public VisualizarPedidos()
         {
             InitializeComponent();
-            
         }
 
         private void VisualizarPedidos_Load(object sender, EventArgs e)
         {
-            PedidosDataGrid.DataSource = null;
-            PedidosDataGrid.DataSource = RepositorioPedidos.PedidosRealizados;
+            dataGridView1.DataSource = null; // Limpa a origem anterior
+            dataGridView1.DataSource = RepositorioPedidos.PedidosRealizados;
         }
     }
 }

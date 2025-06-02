@@ -11,7 +11,7 @@ namespace Restaurante.Models
     {
         public int ClienteID { get; private set; }
         static int geradorClienteId { get; set; } = 1;
-        public List <Pedidos> HistoricoPedidos { get; set; } = new List<Pedidos>();
+        public List <Pedido> HistoricoPedidos { get; set; } = new List<Pedido>();
        
         public string IdentificadorCombox
         {
@@ -28,7 +28,7 @@ namespace Restaurante.Models
             geradorClienteId++;
         }
 
-        public void AdicionarPedido(Pedidos pedido)
+        public void AdicionarPedido(Pedido pedido)
         {
             HistoricoPedidos.Add(pedido);
         }

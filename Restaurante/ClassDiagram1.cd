@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Restaurante.Models.Pessoa" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAgCAAAIAgAAAAAgAAAAIAAAAAAIAQAAGAEAA=</HashCode>
+      <FileName>Models\Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.Models.Cliente">
+    <Position X="11.5" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAABAAAAAAAAAAAAAAAAAAAAIJAAA=</HashCode>
+      <FileName>Models\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.Models.Empregado">
+    <Position X="8" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAQAAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Empregado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.Models.Mesa">
+    <Position X="15.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQBAAA=</HashCode>
+      <FileName>Models\Mesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.Models.Pratos" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="8" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAUAAEEABA=</HashCode>
+      <FileName>Models\Pratos.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.6" />
+  </Class>
+  <Class Name="Restaurante.Models.Pedido">
+    <Position X="11.5" Y="9" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="Restaurante.Models.Pedido.StatusPedido" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\Pedido.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAACCAAABAAAAAJIAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\Pedido.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+      <Property Name="Mesa" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItensPratos" />
+      <Property Name="ItensBebidas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Restaurante.FormBase" Collapsed="true">
+    <Position X="21.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAMA4AAAAAHAMAQAAAAA=</HashCode>
+      <FileName>FormBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.MostrarClientes" Collapsed="true">
+    <Position X="23.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAACICAAAACAAggAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MostrarClientes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.RealizarPedido">
+    <Position X="17.5" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQYIACAAoBgAKICEAAACEAxAAIAAAAAAEIAAAEI=</HashCode>
+      <FileName>RealizarPedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurante.Models.Bebidas" Collapsed="true">
+    <Position X="7.75" Y="11.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAUAAECABA=</HashCode>
+      <FileName>Models\Bebidas.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Restaurante.Models.RepositorioBebidas" Collapsed="true">
+    <Position X="4.25" Y="12.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAQAACAAAAAAA=</HashCode>
+      <FileName>Models\RepositorioBebidas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bebidas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Restaurante.Models.RepositorioCliente" Collapsed="true">
+    <Position X="14.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAACAAAAABAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\RepositorioCliente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Clientes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Restaurante.Models.RepositorioEmpregado">
+    <Position X="3.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAABAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RepositorioEmpregado.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Empregados" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Restaurante.Models.RepositorioPratos" Collapsed="true">
+    <Position X="2" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAEIAAAAAAAAACAAAAAAAAAAAAAAAAAIAEAAA=</HashCode>
+      <FileName>Models\RepositorioPratos.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Pratos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Restaurante.Models.RepositorioMesa">
+    <Position X="20.5" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RepositorioMesa.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Mesas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="Restaurante.Models.IItens" Collapsed="true">
+    <Position X="1.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAEAAAA=</HashCode>
+      <FileName>Models\IItens.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,6 +1,6 @@
 ﻿namespace Restaurante
 {
-    partial class RealizarPedidocs
+    partial class RealizarPedido
     {
         /// <summary>
         /// Required designer variable.

@@ -151,7 +151,7 @@
             // TempoEstimadoInput
             // 
             this.TempoEstimadoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempoEstimadoInput.Location = new System.Drawing.Point(1255, 469);
+            this.TempoEstimadoInput.Location = new System.Drawing.Point(1272, 469);
             this.TempoEstimadoInput.Name = "TempoEstimadoInput";
             this.TempoEstimadoInput.Size = new System.Drawing.Size(320, 79);
             this.TempoEstimadoInput.TabIndex = 27;
