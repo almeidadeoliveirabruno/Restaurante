@@ -23,29 +23,15 @@ namespace Restaurante
         {
             MostrarClientes mostrarClientes = new MostrarClientes();
             mostrarClientes.Show();
-            if (!(this is TelaPrincipal))
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-            }
-            
+            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             CadastroEmpregados cadastroCozinheiro = new CadastroEmpregados();
             cadastroCozinheiro.Show();
-            if (!(this is TelaPrincipal))
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-            }
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)

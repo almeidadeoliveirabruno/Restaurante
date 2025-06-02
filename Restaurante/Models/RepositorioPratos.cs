@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restaurante.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Restaurante.Models
     static class RepositorioPratos
     {
         public static List<Pratos> Pratos = new List<Pratos>();
-        public static String caminhoImagem = "D:\\Cursos\\C#\\Restaurante\\Restaurante\\Resources\\Hamburguer125125.png";
+        
         static RepositorioPratos()
         {
             // Adicionando um prato de exemplo
@@ -17,23 +18,24 @@ namespace Restaurante.Models
                 nome: "Feijoada",
                 preco: 45.00m,
                 minutos: 60,
-                caminhoImagem: caminhoImagem
+                caminhoImagem: "Resources\\Restaurante-Comida-Feijoada.png" 
             );
             AdicionarPrato(pratoTeste);
             var pratoTeste2 = new Pratos(
                 nome: "Pizza Margherita",
                 preco: 30.00m,
                 minutos: 30,
-                caminhoImagem: caminhoImagem
+                caminhoImagem: "Resources\\Restaurante-Comida-Pizza.png"
             );
             AdicionarPrato(pratoTeste2);
             var pratoTeste3 = new Pratos(
                 nome: "Hambúrguer",
                 preco: 25.00m,
                 minutos: 20,
-                caminhoImagem: caminhoImagem
+                caminhoImagem: "Resources\\Hamburguer125125.png"
             );
             AdicionarPrato(pratoTeste3);
+            
         }
         public static void AdicionarPrato(Pratos prato)
         {

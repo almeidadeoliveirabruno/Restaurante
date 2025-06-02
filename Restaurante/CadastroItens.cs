@@ -15,9 +15,26 @@ namespace Restaurante
 {
     public partial class CadastroItens: FormBase
     {
+        public string caminhoImagemSelecionada = null;
         public CadastroItens()
         {
             InitializeComponent();
+        }
+
+        private void btnSelecionarImagem_Click(object sender, EventArgs e)
+        {
+            // Criando o seletor de arquivos
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Selecione uma imagem";
+            openFileDialog.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                caminhoImagemSelecionada = openFileDialog.FileName; // Caminho da imagem selecionada
+
+                // Mostra a imagem no PictureBox
+                btnSelecionarImagem.Image = Image.FromFile(caminhoImagemSelecionada);
+            }
         }
 
         private void TipoCombox_Validacao(object sender, EventArgs e)
@@ -100,6 +117,11 @@ namespace Restaurante
                 MessageBox.Show("Preencha o campo Preço.");
                 PrecoInput.Focus();
             }
+            else if (string.IsNullOrEmpty(caminhoImagemSelecionada))
+            {
+                MessageBox.Show("Por favor, selecione uma imagem.");
+                return;
+            }
             else if (string.IsNullOrWhiteSpace(TipoComBox.Text))
             {
                 MessageBox.Show("Selecione um tipo de item.");
@@ -133,7 +155,8 @@ namespace Restaurante
                     RepositorioBebidas.AdicionarBebida(new Bebidas(
                         NomeInput.Text,
                         Decimal.Parse(PrecoInput.Text),
-                        AlcoolcheckBox.Checked
+                        AlcoolcheckBox.Checked,
+                        caminhoImagemSelecionada
                     ));
                     MessageBox.Show("Item cadastrado com sucesso!");
                     NomeInput.Clear();
@@ -149,12 +172,11 @@ namespace Restaurante
                         NomeInput.Focus();
                         return;
                     }
-                    string caminho = Path.Combine(Application.StartupPath, "Resources", "Hamburguer125125.png");
                     RepositorioPratos.AdicionarPrato(new Pratos(
                         NomeInput.Text,
                         Decimal.Parse(PrecoInput.Text),
                         int.Parse(TempoEstimadoInput.Text),
-                        caminho));
+                        caminhoImagemSelecionada));
                     MessageBox.Show("Item cadastrado com sucesso!");
                     NomeInput.Clear();
                     PrecoInput.Clear();

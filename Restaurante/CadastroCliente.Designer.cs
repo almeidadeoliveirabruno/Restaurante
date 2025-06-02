@@ -3,7 +3,7 @@ using System;
 
 namespace Restaurante
 {
-    partial class Form1
+    partial class CadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -330,7 +330,7 @@ namespace Restaurante
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "8";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.Controls.SetChildIndex(this.label1, 0);

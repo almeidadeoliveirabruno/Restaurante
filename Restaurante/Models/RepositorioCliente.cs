@@ -20,7 +20,16 @@ namespace Restaurante.Models
             email: "maria@teste.com",
             dataNascimento: new DateTime(1985, 3, 10));
             Adicionar(clienteTeste);
+            var clienteTeste2 = new Cliente(
+                nome: "João da Silva Souza",
+                cpf: "12345678900",
+                telefone: "21999998888",
+                endereco: "Avenida Brasil, 123, Rio De Janeiro, Brasil, Volta Redonda, Qualquer coisa",
+                email: "JoãoTeste@unifoa.edu.br",
+                dataNascimento: new DateTime(1990, 5, 15));
+            Adicionar(clienteTeste2);
         }
+        
             public static bool Adicionar(Cliente c)
             {
                 if (VerificaSeClienteExiste( c.Cpf))

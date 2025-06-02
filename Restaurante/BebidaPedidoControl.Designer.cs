@@ -40,7 +40,6 @@
             // picImage
             // 
             this.picImage.BackColor = System.Drawing.SystemColors.Window;
-            this.picImage.Image = global::Restaurante.Properties.Resources.CocaCola150150;
             this.picImage.Location = new System.Drawing.Point(29, 3);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(150, 125);

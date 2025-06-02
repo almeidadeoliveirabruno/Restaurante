@@ -8,11 +8,40 @@ namespace Restaurante.Models
 {
     public class Pedidos
     {
-        public int Id { get; private set; }
-        public DateTime DataHoraPedido { get; private set; }
-        public string Status { get; private set; }
-        public decimal PrecoTotal { get; private set; }
-        public Cliente Cliente { get; private set; }
-        public List<IItens> Pedido { get; private set; } = new List<IItens>();
+        public enum StatusPedido
+        {
+            EmAndamento,
+            Entregue,
+            Pago,
+            Cancelado
+        }
+        public int Id { get; set; }
+        static int GeradorPedidoId = 1;
+        public DateTime DataHoraPedido { get; set; } = DateTime.Now;
+        public StatusPedido status { get; set; } = StatusPedido.EmAndamento;   
+        public decimal PrecoTotal { get; set; }
+        public Cliente Cliente { get; set; }
+        public List<Pratos> ItensPratos { get; set; } = new List<Pratos>();
+        public List<Bebidas> ItensBebidas { get; set; } = new List<Bebidas>();
+        public Mesa Mesa { get; set; }
+        public Pedidos(Cliente cliente, List<Pratos> prato, List<Bebidas> bebida, Mesa mesa)
+        {
+            Id = GeradorPedidoId++;
+            Cliente = cliente;
+            if (prato != null)
+            {
+                ItensPratos = prato;
+            }
+            if (bebida != null)
+            {
+                ItensBebidas = bebida;
+            }
+            Mesa = mesa;
+        }
+        public void CalcularPrecoTotal()
+        {
+            PrecoTotal = ItensPratos.Sum(p => p.Preco * p.Quantidade) + ItensBebidas.Sum(b => b.Preco * b.Quantidade);
+        }
     }
+    
 }

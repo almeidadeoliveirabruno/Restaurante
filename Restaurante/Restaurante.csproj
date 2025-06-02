@@ -68,11 +68,11 @@
     <Compile Include="ComidaPedidoControl.Designer.cs">
       <DependentUpon>ComidaPedidoControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CadastroCliente.Designer.cs">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
@@ -138,6 +138,12 @@
     <Compile Include="VisualizarMesa.Designer.cs">
       <DependentUpon>VisualizarMesa.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisualizarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarPedidos.Designer.cs">
+      <DependentUpon>VisualizarPedidos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CadastroEmpregados.resx">
       <DependentUpon>CadastroEmpregados.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,8 +153,8 @@
     <EmbeddedResource Include="ComidaPedidoControl.resx">
       <DependentUpon>ComidaPedidoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroCliente.resx">
+      <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
@@ -184,6 +190,9 @@
     <EmbeddedResource Include="VisualizarMesa.resx">
       <DependentUpon>VisualizarMesa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarPedidos.resx">
+      <DependentUpon>VisualizarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\Restaurante.Models.Cliente.datasource" />
     <None Include="Properties\DataSources\Restaurante.Models.RepositorioCliente.datasource" />
     <None Include="Properties\DataSources\Restaurante.Models.RepositorioEmpregado.datasource" />
@@ -211,6 +220,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Hamburguer125125.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Logo Restaurante Stack Overplate1.png" />
+    <None Include="Resources\Pilhas de Pratos Minimalistas.png" />
+    <Content Include="Resources\Restaurante-Bebida-AguaMineral.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Bebida-Cerveja.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Bebida-CocaCola.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Bebida-ColaColaZero.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Bebida-SucoLaranja.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Bebida-VinhoTinto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Bebida-Whisky.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Comida-Feijoada.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Restaurante-Comida-Pizza.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

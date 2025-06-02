@@ -27,7 +27,8 @@ namespace Restaurante
             dataGridView2.ReadOnly = true;
             dataGridView2.DataSource = null; // limpa a origem anterior
             dataGridView2.DataSource = (RepositorioPratos.Pratos);
-            dataGridView2.Columns["Quantidade"].Visible = false;
+            dataGridView2.Columns["Quantidade"].Visible = true;
+            dataGridView2.Columns["CaminhoImagem"].Visible = false;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

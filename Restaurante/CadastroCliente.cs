@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class Form1 : FormBase
+    public partial class CadastroCliente : FormBase
     {
-        public Form1()
+        public CadastroCliente()
         {
             InitializeComponent();
     
@@ -176,6 +176,7 @@ namespace Restaurante
         {
             MostrarClientes mostrarClientes = new MostrarClientes();
             mostrarClientes.Show(); // abre o form como janela independente
+            this.Close(); // fecha o form atual
         }
 
         private void EmailInput_TextChanged(object sender, EventArgs e)

@@ -18,13 +18,8 @@ namespace Restaurante
         public string CaminhoImagem { get; set; }
         public int Id { get; set; } 
         public int Quantidade { get; set; } = 0;
-        public Action<int, int> AoAtualizarQuantidadeBebida; // envia nome e quantidade
-        //public BebidaPedidoControl()
-        //{
-        //    InitializeComponent();
-        //}
-
-        public BebidaPedidoControl(string nomeProduto, decimal preco,int id)
+        public Action<int, int> AoAtualizarQuantidadeBebida; 
+        public BebidaPedidoControl(string nomeProduto, decimal preco,int id, string caminhoImagem)
         {
             InitializeComponent();
             NomeProduto = nomeProduto;
@@ -34,14 +29,19 @@ namespace Restaurante
             lblPreco.Text = $"R$ {preco:F2}";
             lblQuantidade.Text = Quantidade.ToString();
             Id = id;
-
+            picImage.Image = caminhoImagem != null ? Image.FromFile(caminhoImagem) : null; // Carrega a imagem se o caminho não for nulo
+        }
+        public void ResetarQuantidade()
+        {
+            Quantidade = 0; // idem acima
+            lblQuantidade.Text = Quantidade.ToString();
         }
 
         private void btnMais_Click(object sender, EventArgs e)
         {
             Quantidade++;
             lblQuantidade.Text = Quantidade.ToString();
-            AoAtualizarQuantidadeBebida.Invoke(Id, Quantidade); // Notifica a atualização da quantidade
+            AoAtualizarQuantidadeBebida(Id, Quantidade); // Notifica a atualização da quantidade
         }
 
         private void btnMenos_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Restaurante
             {
                 Quantidade--;
                 lblQuantidade.Text = Quantidade.ToString();
-                AoAtualizarQuantidadeBebida.Invoke(Id, Quantidade); // Notifica a atualização da quantidade
+                AoAtualizarQuantidadeBebida(Id, Quantidade); // Notifica a atualização da quantidade
             }
         }
 

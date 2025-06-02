@@ -31,9 +31,9 @@ namespace Restaurante
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
-            Form1 cadastroClientes = new Form1();
+            CadastroCliente cadastroClientes = new CadastroCliente();
             cadastroClientes.Show();
-            if (!(this is Form1))
+            if (!(this is CadastroCliente))
             {
                 this.Close();
             }

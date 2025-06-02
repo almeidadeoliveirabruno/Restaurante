@@ -33,6 +33,11 @@ namespace Restaurante
             lblQuantidade.Text = Quantidade.ToString();
             Id = id;
         }
+        public void ResetarQuantidade()
+        {
+            Quantidade = 0; // idem acima
+            lblQuantidade.Text = Quantidade.ToString(); 
+        }
         private void btnMais_Click(object sender, EventArgs e)
         {
             Quantidade++;

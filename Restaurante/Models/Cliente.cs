@@ -12,7 +12,14 @@ namespace Restaurante.Models
         public int ClienteID { get; private set; }
         static int geradorClienteId { get; set; } = 1;
         public List <Pedidos> HistoricoPedidos { get; set; } = new List<Pedidos>();
-        
+       
+        public string IdentificadorCombox
+        {
+            get
+            {
+                return $"{Nome} - {Cpf}";
+            }
+        }
 
         public Cliente( string nome, string cpf, string telefone, string endereco, string email, DateTime dataNascimento)
          : base(nome, cpf, telefone, endereco, dataNascimento,email)

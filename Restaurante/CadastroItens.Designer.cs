@@ -41,6 +41,9 @@
             this.TempoEstimadoInput = new System.Windows.Forms.TextBox();
             this.Cadastrar = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.btnSelecionarImagem = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSelecionarImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +60,7 @@
             // 
             this.Nome.AutoSize = true;
             this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.Location = new System.Drawing.Point(527, 155);
+            this.Nome.Location = new System.Drawing.Point(453, 155);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(197, 72);
             this.Nome.TabIndex = 19;
@@ -67,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1429, 155);
+            this.label2.Location = new System.Drawing.Point(1353, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 72);
             this.label2.TabIndex = 20;
@@ -82,7 +85,7 @@
             this.TipoComBox.Items.AddRange(new object[] {
             "Comida",
             "Bebida"});
-            this.TipoComBox.Location = new System.Drawing.Point(1605, 148);
+            this.TipoComBox.Location = new System.Drawing.Point(1511, 148);
             this.TipoComBox.Name = "TipoComBox";
             this.TipoComBox.Size = new System.Drawing.Size(320, 79);
             this.TipoComBox.TabIndex = 21;
@@ -93,7 +96,7 @@
             // NomeInput
             // 
             this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeInput.Location = new System.Drawing.Point(739, 148);
+            this.NomeInput.Location = new System.Drawing.Point(675, 148);
             this.NomeInput.Name = "NomeInput";
             this.NomeInput.Size = new System.Drawing.Size(650, 79);
             this.NomeInput.TabIndex = 22;
@@ -102,7 +105,7 @@
             // 
             this.PrecoText.AutoSize = true;
             this.PrecoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecoText.Location = new System.Drawing.Point(527, 306);
+            this.PrecoText.Location = new System.Drawing.Point(455, 306);
             this.PrecoText.Name = "PrecoText";
             this.PrecoText.Size = new System.Drawing.Size(195, 72);
             this.PrecoText.TabIndex = 23;
@@ -115,7 +118,7 @@
             // PrecoInput
             // 
             this.PrecoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecoInput.Location = new System.Drawing.Point(739, 299);
+            this.PrecoInput.Location = new System.Drawing.Point(675, 303);
             this.PrecoInput.Name = "PrecoInput";
             this.PrecoInput.Size = new System.Drawing.Size(270, 79);
             this.PrecoInput.TabIndex = 24;
@@ -124,7 +127,7 @@
             // AlcoolcheckBox
             // 
             this.AlcoolcheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AlcoolcheckBox.Location = new System.Drawing.Point(539, 428);
+            this.AlcoolcheckBox.Location = new System.Drawing.Point(469, 469);
             this.AlcoolcheckBox.Name = "AlcoolcheckBox";
             this.AlcoolcheckBox.Size = new System.Drawing.Size(420, 75);
             this.AlcoolcheckBox.TabIndex = 25;
@@ -137,7 +140,7 @@
             this.TempoEstimadoText.AccessibleName = "TempoEstimado";
             this.TempoEstimadoText.AutoSize = true;
             this.TempoEstimadoText.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempoEstimadoText.Location = new System.Drawing.Point(527, 431);
+            this.TempoEstimadoText.Location = new System.Drawing.Point(453, 476);
             this.TempoEstimadoText.Name = "TempoEstimadoText";
             this.TempoEstimadoText.Size = new System.Drawing.Size(785, 72);
             this.TempoEstimadoText.TabIndex = 26;
@@ -148,7 +151,7 @@
             // TempoEstimadoInput
             // 
             this.TempoEstimadoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 37.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempoEstimadoInput.Location = new System.Drawing.Point(1441, 431);
+            this.TempoEstimadoInput.Location = new System.Drawing.Point(1255, 469);
             this.TempoEstimadoInput.Name = "TempoEstimadoInput";
             this.TempoEstimadoInput.Size = new System.Drawing.Size(320, 79);
             this.TempoEstimadoInput.TabIndex = 27;
@@ -179,11 +182,35 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // btnSelecionarImagem
+            // 
+            this.btnSelecionarImagem.AccessibleName = "btnSelecionarImagem";
+            this.btnSelecionarImagem.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSelecionarImagem.Location = new System.Drawing.Point(1626, 599);
+            this.btnSelecionarImagem.Name = "btnSelecionarImagem";
+            this.btnSelecionarImagem.Size = new System.Drawing.Size(155, 155);
+            this.btnSelecionarImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnSelecionarImagem.TabIndex = 30;
+            this.btnSelecionarImagem.TabStop = false;
+            this.btnSelecionarImagem.Click += new System.EventHandler(this.btnSelecionarImagem_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F);
+            this.label3.Location = new System.Drawing.Point(453, 643);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1002, 71);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Selecione Uma Imagem 125x125px";
+            // 
             // CadastroItens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnSelecionarImagem);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.TempoEstimadoInput);
@@ -211,6 +238,9 @@
             this.Controls.SetChildIndex(this.TempoEstimadoInput, 0);
             this.Controls.SetChildIndex(this.Cadastrar, 0);
             this.Controls.SetChildIndex(this.button6, 0);
+            this.Controls.SetChildIndex(this.btnSelecionarImagem, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSelecionarImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +261,7 @@
         private System.Windows.Forms.TextBox TempoEstimadoInput;
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox btnSelecionarImagem;
+        private System.Windows.Forms.Label label3;
     }
 }

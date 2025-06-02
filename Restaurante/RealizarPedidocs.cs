@@ -11,64 +11,59 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class RealizarPedidocs: FormBase
+    public partial class RealizarPedidocs : FormBase
     {
+        private Dictionary<int, int> pedidoAtualBebida = new Dictionary<int, int>();
+        private Dictionary<int, int> pedidoAtualComida = new Dictionary<int, int>();
+        public List<Pratos> ListaPratos = new List<Pratos>();
+        public List<Bebidas> ListaBebidas = new List<Bebidas>();
+
         public RealizarPedidocs()
         {
             InitializeComponent();
         }
 
-        private Dictionary<int, int> pedidoAtualBebida = new Dictionary<int, int>();
-        private Dictionary<int, int> pedidoAtualComida = new Dictionary<int, int>();
-        public List<Pratos> ListaComidas = new List<Pratos>();
-        public List< Bebidas> ListaBebidas = new List<Bebidas>();
-        private void AtualizarPedidoComida(int id, int quantidade)
+        // ---------------------------
+        // Eventos do Ciclo de Vida
+        // ---------------------------
+        private void RealizarPedidocs_Load(object sender, EventArgs e)
         {
-            if (quantidade <= 0)
-            {
-                if (pedidoAtualComida.ContainsKey(id))
-                    pedidoAtualComida.Remove(id);
-                CalcularTotal();
-            }
-            else
-            {
-                pedidoAtualComida[id] = quantidade;
-                CalcularTotal();
-            }
-            // Só pra debug, mostrar o pedido atualizado no console
-            Console.WriteLine("Pedido Atual:");
-            foreach (var item in pedidoAtualComida)
-            {
-                Console.WriteLine($"Produto: {item.Key}, Quantidade: {item.Value}");
-            }
+            CarregarPedidos();
+            ClientesComBox.DataSource = RepositorioCliente.Clientes;
+            ClientesComBox.DisplayMember = "IdentificadorCombox";
+            ClientesComBox.ValueMember = "ClienteID";
+            MesaCombox.DataSource = RepositorioMesa.Mesas;
+            MesaCombox.DisplayMember = "Numero";
         }
 
-
-        private void AtualizarPedidoBebida(int id, int quantidade)
+        // ---------------------------
+        // Métodos Auxiliares
+        // ---------------------------
+        private void CarregarPedidos()
         {
-            if (quantidade <= 0)
+            flowLayoutPanelBebidas.Controls.Clear();
+            foreach (var pedido in RepositorioBebidas.Bebidas)
             {
-                if (pedidoAtualBebida.ContainsKey(id))
-                    pedidoAtualBebida.Remove(id);
-                CalcularTotal();
-            }
-            else
-            {
-                pedidoAtualBebida[id] = quantidade;
-                CalcularTotal();
+                var item = new BebidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
+                item.Margin = new Padding(13);
+                item.AoAtualizarQuantidadeBebida = AtualizarPedidoBebida;
+                flowLayoutPanelBebidas.Controls.Add(item);
             }
 
-            // Só pra debug, mostrar o pedido atualizado no console
-            Console.WriteLine("Pedido Atual:");
-            foreach (var item in pedidoAtualBebida)
+            flowLayoutPanelComidas.Controls.Clear();
+            foreach (var pedido in RepositorioPratos.Pratos)
             {
-                Console.WriteLine($"Produto: {item.Key}, Quantidade: {item.Value}");
+                var item = new ComidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
+                item.Margin = new Padding(13);
+                item.AoAtualizarQuantidadeComida = AtualizarPedidoComida;
+                flowLayoutPanelComidas.Controls.Add(item);
             }
         }
 
         private void CalcularTotal()
         {
             decimal total = 0;
+
             foreach (var item in pedidoAtualBebida)
             {
                 var bebida = RepositorioBebidas.Bebidas.FirstOrDefault(b => b.Id == item.Key);
@@ -77,6 +72,7 @@ namespace Restaurante
                     total += bebida.Preco * item.Value;
                 }
             }
+
             foreach (var item in pedidoAtualComida)
             {
                 var comida = RepositorioPratos.Pratos.FirstOrDefault(c => c.Id == item.Key);
@@ -85,36 +81,136 @@ namespace Restaurante
                     total += comida.Preco * item.Value;
                 }
             }
+
             TotalCusto.Text = $"Total: R$ {total:F2}";
         }
 
-
-        private void CarregarPedidosBebidas()
+        // ---------------------------
+        // Atualizações de Pedido
+        // ---------------------------
+        private void AtualizarPedidoComida(int id, int quantidade)
         {
-            flowLayoutPanelBebidas.Controls.Clear(); 
-
-            foreach (var pedido in RepositorioBebidas.Bebidas)
+            if (quantidade <= 0)
             {
-                var item = new BebidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id);
-                item.Margin = new Padding(13); // espaçamento externo
-                flowLayoutPanelBebidas.Controls.Add(item);
-                item.AoAtualizarQuantidadeBebida = AtualizarPedidoBebida;
+                pedidoAtualComida.Remove(id);
+                ListaPratos.RemoveAll(c => c.Id == id);
+            }
+            else
+            {
+                pedidoAtualComida[id] = quantidade;
+
+                if (!ListaPratos.Any(c => c.Id == id))
+                {
+                    var comida = RepositorioPratos.Pratos.FirstOrDefault(c => c.Id == id);
+                    if (comida != null)
+                    {
+                        comida.Quantidade = quantidade; // Define a quantidade inicial
+                        ListaPratos.Add(comida);
+                    }
+                }
+                else
+                {
+                    var comidaExistente = ListaPratos.FirstOrDefault(c => c.Id == id);
+                    if (comidaExistente != null)
+                    {
+                        comidaExistente.Quantidade = quantidade;
+                    }
+                }
             }
 
-            flowLayoutPanelComidas.Controls.Clear();
-            foreach (var pedido in RepositorioPratos.Pratos)
+            CalcularTotal();
+        }
+
+        private void AtualizarPedidoBebida(int id, int quantidade)
+        {
+            if (quantidade <= 0)
             {
-                var item = new ComidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
-                item.Margin = new Padding(13); // espaçamento externo
-                flowLayoutPanelComidas.Controls.Add(item);
-                item.AoAtualizarQuantidadeComida = AtualizarPedidoComida;
+                pedidoAtualBebida.Remove(id);
+                ListaBebidas.RemoveAll(b => b.Id == id);
+            }
+            else
+            {
+                pedidoAtualBebida[id] = quantidade;
+
+                if (!ListaBebidas.Any(b => b.Id == id))
+                {
+                    var bebida = RepositorioBebidas.Bebidas.FirstOrDefault(b => b.Id == id);
+                    if (bebida != null)
+                    {
+                        bebida.Quantidade = quantidade; // Define a quantidade inicial
+                        ListaBebidas.Add(bebida);
+                    }
+                }
+                else
+                {
+                    var bebidaExistente = ListaBebidas.FirstOrDefault(b => b.Id == id);
+                    if (bebidaExistente != null)
+                    {
+                        bebidaExistente.Quantidade = quantidade;
+                    }
+                }
+            }
+
+            CalcularTotal();
+        }
+
+        // ---------------------------
+        // Eventos de Botão
+        // ---------------------------
+        private void Cadastrar_Click(object sender, EventArgs e)
+        {
+            if (pedidoAtualBebida.Count == 0 && pedidoAtualComida.Count == 0)
+            {
+                MessageBox.Show("Nenhum item foi adicionado ao pedido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (ClientesComBox.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um cliente antes de finalizar o pedido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } if (MesaCombox.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma mesa antes de finalizar o pedido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var dialogResult = MessageBox.Show("Deseja finalizar o pedido?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                var clienteSelecionado = (Cliente)ClientesComBox.SelectedItem;
+
+                
+                Mesa mesaSelecionada = (Mesa)MesaCombox.SelectedItem;
+                Pedidos pedidos = new Pedidos(clienteSelecionado, ListaPratos, ListaBebidas, mesaSelecionada);
+                pedidos.CalcularPrecoTotal();
+                RepositorioPedidos.AdicionarPedidos(pedidos);
+
+                MessageBox.Show("Pedido realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+                // Reset
+                pedidoAtualBebida.Clear();
+                pedidoAtualComida.Clear();
+                ListaPratos.Clear();
+                ListaBebidas.Clear();
+                CarregarPedidos();
+                TotalCusto.Text = "Total: R$ 0,00";
+               
             }
         }
 
-        private void RealizarPedidocs_Load(object sender, EventArgs e)
+        private void VisualizarPedidoButton_Click(object sender, EventArgs e)
         {
-            CarregarPedidosBebidas();
+            VisualizarPedidos visualizarPedidos = new VisualizarPedidos();
+            visualizarPedidos.ShowDialog();
         }
 
+        // ---------------------------
+        // Eventos Visuais (não usados)
+        // ---------------------------
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // Pode ser removido se não estiver em uso
+        }
     }
 }

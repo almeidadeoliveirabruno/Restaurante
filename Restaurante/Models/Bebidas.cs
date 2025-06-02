@@ -13,15 +13,17 @@ namespace Restaurante.Models
         public int Id { get; set; }
         public decimal Preco { get;  set; }
         public int Quantidade { get; set; } = 0;
+        public string CaminhoImagem { get; set; }
         static int GeradorBebidaId { get;  set; } = 1;
 
-        public Bebidas(string nome, decimal preco, Boolean alcool)
+        public Bebidas(string nome, decimal preco, Boolean alcool, string caminhoImagem)
         {
             Nome = nome;
             Preco = preco;
             Alcool = alcool;
             Id = GeradorBebidaId;
             GeradorBebidaId++;
+            CaminhoImagem = caminhoImagem;
         }
     }
 
