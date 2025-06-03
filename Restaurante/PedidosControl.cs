@@ -8,23 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using static Restaurante.Models.Pedido;
 
 namespace Restaurante
 {
     public partial class PedidosControl : UserControl
     {
+        Pedido _pedido;
         public PedidosControl(Pedido pedido)
         {
             InitializeComponent();
-            CarregarPedidos(pedido);
+            _pedido = pedido;
+            CarregarPedidos(_pedido);
         }
-
-
 
         public void CarregarPedidos(Pedido pedido)
         {
-            Console.WriteLine($"A quantidade de pratos adicionada é: {pedido.ItensPratos.Count}");
-            Console.WriteLine($"A quantidade de Bebidas adicionada é: {pedido.ItensBebidas.Count}");
             lblBebida.Text = "";  // Limpa o texto antes de adicionar
             foreach (var item in pedido.ItensBebidas)
             {
@@ -43,7 +43,46 @@ namespace Restaurante
             lblprecoTotal.Text = $"Preço Total: R$ {pedido.PrecoTotal:F2}";
             pedido.CalcularTempo();
             lblTempoEstimado.Text = $"Hora da Entrega Estimada: {pedido.DataHoraEntrega:HH:mm}";
+            button1.Text = $"Status: {pedido.status}";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        { 
+
+            TrocarStatusEAtualizar();
+        }
+        private void TrocarStatusEAtualizar()
+        {
+            StatusPedido proximoStatus;
+            Color corBotao;
+
+            switch (_pedido.status)
+            {
+                case StatusPedido.EmAndamento:
+                    proximoStatus = StatusPedido.Entregue;
+                    corBotao = Color.YellowGreen;
+                    break;
+                case StatusPedido.Entregue:
+                    proximoStatus = StatusPedido.Pago;
+                    corBotao = Color.LightBlue;
+                    break;
+                case StatusPedido.Pago:
+                    proximoStatus = StatusPedido.Cancelado;
+                    corBotao = Color.LightGray;
+                    break;
+                case StatusPedido.Cancelado:
+                    proximoStatus = StatusPedido.EmAndamento;
+                    corBotao = Color.Orange;
+                    break;
+                default:
+                    proximoStatus = StatusPedido.EmAndamento;
+                    corBotao = Color.Orange;
+                    break;
+            }
+
+            _pedido.status = proximoStatus;
+            button1.Text = $"Status: {_pedido.status}";
+            button1.BackColor = corBotao;
+        }
     }
 }

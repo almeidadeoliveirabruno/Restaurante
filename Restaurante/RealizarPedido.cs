@@ -141,6 +141,7 @@ namespace Restaurante
                         var clone = bebida.Clone();
                         clone.Quantidade = quantidade; // Define a quantidade inicial
                         ListaBebidas.Add(clone);
+                        Console.WriteLine($"{clone.Nome} e {clone.Quantidade}");
                     }
                 }
                 else
@@ -190,7 +191,12 @@ namespace Restaurante
                
 
                 Mesa mesaSelecionada = (Mesa)MesaCombox.SelectedItem;
-                Pedido pedidos = new Pedido(clienteSelecionado, ListaPratos, ListaBebidas, mesaSelecionada);
+
+                //
+                var pratosCopia = ListaPratos.Select(p => p.Clone()).ToList();
+                var bebidasCopia = ListaBebidas.Select(b => b.Clone()).ToList();
+
+                Pedido pedidos = new Pedido(clienteSelecionado, pratosCopia, bebidasCopia, mesaSelecionada);
                 pedidos.CalcularPrecoTotal();
                 RepositorioPedidos.AdicionarPedidos(pedidos);
 
@@ -211,6 +217,7 @@ namespace Restaurante
         {
             VisualizarPedidos visualizarPedidos = new VisualizarPedidos();
             visualizarPedidos.Show();
+
         }
 
         // ---------------------------

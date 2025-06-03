@@ -39,6 +39,7 @@
             this.lblComida = new System.Windows.Forms.Label();
             this.lblBebida = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblprecoTotal);
             this.panel1.Controls.Add(this.lblTempoEstimado);
@@ -63,7 +65,7 @@
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(847, 319);
+            this.panel1.Size = new System.Drawing.Size(847, 385);
             this.panel1.TabIndex = 4;
             // 
             // lblNome
@@ -120,7 +122,7 @@
             // 
             this.Bebida.AutoSize = true;
             this.Bebida.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.Bebida.Location = new System.Drawing.Point(853, 160);
+            this.Bebida.Location = new System.Drawing.Point(1366, 0);
             this.Bebida.Name = "Bebida";
             this.Bebida.Size = new System.Drawing.Size(175, 46);
             this.Bebida.TabIndex = 12;
@@ -140,7 +142,7 @@
             // 
             this.lblBebida.AutoSize = true;
             this.lblBebida.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.lblBebida.Location = new System.Drawing.Point(853, 206);
+            this.lblBebida.Location = new System.Drawing.Point(1366, 46);
             this.lblBebida.Name = "lblBebida";
             this.lblBebida.Size = new System.Drawing.Size(86, 46);
             this.lblBebida.TabIndex = 14;
@@ -154,6 +156,16 @@
             this.panel2.Size = new System.Drawing.Size(1010, 319);
             this.panel2.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 299);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(223, 83);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Status Pedido: Em Aberto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PedidosControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,7 +177,7 @@
             this.Controls.Add(this.Comida);
             this.Controls.Add(this.panel1);
             this.Name = "PedidosControl";
-            this.Size = new System.Drawing.Size(1850, 319);
+            this.Size = new System.Drawing.Size(1975, 385);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -185,5 +197,6 @@
         private System.Windows.Forms.Label lblComida;
         private System.Windows.Forms.Label lblBebida;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }

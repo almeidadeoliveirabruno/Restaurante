@@ -23,22 +23,27 @@ namespace Restaurante.Models
         public string Telefone
         {
             get { return telefone; }
+            set { telefone = value; }
         }
         public string Endereco
         {
             get { return endereco; }
+            set { endereco = value; }
         }
         public DateTime DataNascimento
         {
             get { return dataNascimento; }
+            set { dataNascimento = value; }
         }
         public string Cpf
         {
             get { return cpf; }
+            set { cpf = value; }
         }
         public string Email
         {
             get { return email; }
+            set { email = value; }
         }
         public int Idade //fazer exceções de erro
         {

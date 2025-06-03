@@ -33,10 +33,11 @@
             // 
             // flowLayoutPedidos
             // 
+            this.flowLayoutPedidos.AutoScroll = true;
             this.flowLayoutPedidos.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.flowLayoutPedidos.Location = new System.Drawing.Point(57, 44);
+            this.flowLayoutPedidos.Location = new System.Drawing.Point(-20, -1);
             this.flowLayoutPedidos.Name = "flowLayoutPedidos";
-            this.flowLayoutPedidos.Size = new System.Drawing.Size(1850, 818);
+            this.flowLayoutPedidos.Size = new System.Drawing.Size(2100, 863);
             this.flowLayoutPedidos.TabIndex = 0;
             // 
             // VisualizarPedidos

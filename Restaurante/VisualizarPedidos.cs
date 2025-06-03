@@ -23,6 +23,8 @@ namespace Restaurante
             flowLayoutPedidos.Controls.Clear();
             foreach (var pedido in RepositorioPedidos.PedidosRealizados)
             {
+                Console.WriteLine($"A quantidade de pratos é {pedido.ItensPratos.Count}");
+                Console.WriteLine($"A quantidade de bEBIDAS é {pedido.ItensPratos.Count}");
                 var item = new PedidosControl(pedido);
                 item.Margin = new Padding(13);
                 flowLayoutPedidos.Controls.Add(item);
