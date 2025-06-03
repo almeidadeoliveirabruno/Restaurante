@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Restaurante.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,29 @@ namespace Restaurante
 {
     public partial class PedidosControl : UserControl
     {
-        public PedidosControl()
+        public PedidosControl(Pedido pedido)
         {
             InitializeComponent();
+            CarregarPedidos(pedido);
+        }
+
+      
+
+        public void CarregarPedidos(Pedido pedido)
+        {
+          
+           foreach (var item in pedido.ItensBebidas)
+           {
+               if (pedido.ItensBebidas.Count > 0)
+               {
+                   lblBebida.Text += $"{item.Nome} : ({item.Quantidade})\n";
+               }
+               if (pedido.ItensPratos.Count > 0)
+                {
+                    lblComida.Text += $"{item.Nome} : ({item.Quantidade})\n";
+                }
+            }
+           
         }
     }
 }

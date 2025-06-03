@@ -210,7 +210,7 @@ namespace Restaurante
         private void VisualizarPedidoButton_Click(object sender, EventArgs e)
         {
             VisualizarPedidos visualizarPedidos = new VisualizarPedidos();
-            visualizarPedidos.ShowDialog();
+            visualizarPedidos.Show();
         }
 
         // ---------------------------

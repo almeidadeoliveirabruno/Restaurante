@@ -20,8 +20,13 @@ namespace Restaurante
 
         private void VisualizarPedidos_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null; // Limpa a origem anterior
-            dataGridView1.DataSource = RepositorioPedidos.PedidosRealizados;
+            flowLayoutPedidos.Controls.Clear();
+            foreach (var pedido in RepositorioBebidas.Bebidas)
+            {
+                var item = new BebidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
+                item.Margin = new Padding(13);
+                //flowLayoutPanelBebidas.Controls.Add(item);
+            }
         }
     }
 }

@@ -54,6 +54,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1449, 428);
             this.dataGridView1.TabIndex = 17;
+           
             // 
             // repositorioEmpregadoBindingSource1
             // 
