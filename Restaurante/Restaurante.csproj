@@ -96,7 +96,7 @@
     <Compile Include="Models\Pratos.cs" />
     <Compile Include="Models\RepositorioBebidas.cs" />
     <Compile Include="Models\RepositorioCliente.cs" />
-    <Compile Include="Models\RepositorioEmpregado.cs" />
+    <Compile Include="Models\RepositorioCozinheiros.cs" />
     <Compile Include="Models\RepositorioMesa.cs" />
     <Compile Include="Models\RepositorioPedidos.cs" />
     <Compile Include="Models\RepositorioPratos.cs" />

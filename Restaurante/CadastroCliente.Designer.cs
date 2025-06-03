@@ -180,7 +180,6 @@ namespace Restaurante
             this.TelefoneInput.Name = "TelefoneInput";
             this.TelefoneInput.Size = new System.Drawing.Size(888, 75);
             this.TelefoneInput.TabIndex = 10;
-            this.TelefoneInput.TextChanged += new System.EventHandler(this.TelefoneInput_TextChanged);
             this.TelefoneInput.Enter += new System.EventHandler(this.TelefoneInput_Enter);
             this.TelefoneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.TelefoneInput.Leave += new System.EventHandler(this.TelefoneInput_Leave);
@@ -257,7 +256,6 @@ namespace Restaurante
             this.button3.TabIndex = 19;
             this.button3.Text = "Mesas";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.DragEnter += new System.Windows.Forms.DragEventHandler(this.button2_DragEnter);
             // 
             // button2
             // 
@@ -270,7 +268,6 @@ namespace Restaurante
             this.button2.TabIndex = 18;
             this.button2.Text = "Garçons";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.DragEnter += new System.Windows.Forms.DragEventHandler(this.button2_DragEnter);
             // 
             // button1
             // 

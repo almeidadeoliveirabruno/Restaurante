@@ -31,7 +31,7 @@ namespace Restaurante
                 btn.Text = $"Mesa {mesa.Numero}";
                 btn.Width = 150;
                 btn.Height = 180;
-                btn.Tag = mesa;
+                //btn.Tag = mesa;
                 btn.BackColor = mesa.Ocupada ? Color.LightCoral : Color.LightGreen;
                 flowLayoutPanelMesas.Controls.Add(btn);
             }

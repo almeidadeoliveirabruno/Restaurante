@@ -29,8 +29,8 @@ namespace Restaurante
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CadastroEmpregados cadastroCozinheiro = new CadastroEmpregados();
-            cadastroCozinheiro.Show();
+            VisualizarEmpregados visualizarEmpregados = new VisualizarEmpregados();
+            visualizarEmpregados.Show();
             this.Close();
         }
 

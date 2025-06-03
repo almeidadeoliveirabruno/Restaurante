@@ -34,13 +34,21 @@ namespace Restaurante.Models
             //Verifica se ja existe,ignorando caixa alta e baixa
             return Bebidas.Any(b => b.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
         }
-        static public void RemoverBebida(int id)
+        static public bool RemoverBebida(int id)
         {
             var bebida = Bebidas.FirstOrDefault(b => b.Id == id);
+            // Verifica se a bebida existe e se não está em algum pedido realizado
+            // Se estiver em algum pedido, não remove
             if (bebida != null)
             {
                 Bebidas.Remove(bebida);
+                return true; // Retorna true se a bebida foi removida com sucesso
             }
+            else
+            {
+                return false; 
+            }
+
         }
 
     }

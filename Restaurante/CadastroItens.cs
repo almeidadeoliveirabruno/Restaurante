@@ -181,6 +181,8 @@ namespace Restaurante
                     NomeInput.Clear();
                     PrecoInput.Clear();
                     TempoEstimadoInput.Clear();
+                    btnSelecionarImagem.Image = null; 
+                    btnSelecionarImagem.Text = "Selecionar Imagem"; // Reseta o texto do botão
                 }
                 else
                 {

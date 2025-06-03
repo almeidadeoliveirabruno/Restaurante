@@ -16,11 +16,16 @@ namespace Restaurante
         public MostrarClientes()
         {
             InitializeComponent();
-            dataGridView1.DataSource = null; // limpa a origem anterior
+            dataGridView1.DataSource = null; 
             dataGridView1.DataSource = (RepositorioCliente.Clientes);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.Columns["Nome"].Width = 400;
-            dataGridView1.Columns["CPF"].Width = 150;
+            dataGridView1.Columns["CPF"].ReadOnly = true;
+            dataGridView1.Columns["ClienteId"].DisplayIndex = 0;
+            dataGridView1.Columns["Nome"].DisplayIndex = 1;
+            dataGridView1.Columns["Cpf"].DisplayIndex = 2;
+            dataGridView1.Columns["Telefone"].DisplayIndex = 3;
+            dataGridView1.Columns["IdentificadorCombox"].Visible= false;
+            dataGridView1.Columns["Endereco"].Visible = false;
 
         }
 
@@ -28,19 +33,66 @@ namespace Restaurante
         {
 
         }
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Refresh();
+        }
+        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            string columnName = dataGridView1.Columns[e.ColumnIndex].Name;
+            string value = e.FormattedValue.ToString();
+
+            if (columnName == "Nome" && string.IsNullOrWhiteSpace(value))
+            {
+                MessageBox.Show("O campo Nome não pode estar vazio.");
+                e.Cancel = true;
+            }
+
+            if (columnName == "CPF")
+            {
+                if (string.IsNullOrWhiteSpace(value) || value.Length != 11 || !value.All(char.IsDigit))
+                {
+                    MessageBox.Show("CPF inválido. Deve conter 11 dígitos numéricos.");
+                    e.Cancel = true;
+                }
+                else if (RepositorioCliente.Clientes.Any(c => c.Cpf == value && c != (Cliente)dataGridView1.Rows[e.RowIndex].DataBoundItem))
+                {
+                    MessageBox.Show("CPF já existe para outro cliente.");
+                    e.Cancel = true;
+                }
+            }
+
+            if (columnName == "Email")
+            {
+                if (string.IsNullOrWhiteSpace(value) || !value.Contains("@") || !value.Contains("."))
+                {
+                    MessageBox.Show("Email inválido.");
+                    e.Cancel = true;
+                }
+            }
+
+            if (columnName == "Telefone")
+            {
+                if (value.Length < 10 || !value.All(char.IsDigit))
+                {
+                    MessageBox.Show("Telefone deve conter pelo menos 10 dígitos numéricos.");
+                    e.Cancel = true;
+                }
+            }
+
+            if (columnName == "Endereco" && string.IsNullOrWhiteSpace(value))
+            {
+                MessageBox.Show("Endereço não pode estar vazio.");
+                e.Cancel = true;
+            }
+        }
+
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
             CadastroCliente cadastroClientes = new CadastroCliente();
             cadastroClientes.Show();
-            if (!(this is CadastroCliente))
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-            }
+            this.Close();
         }
     }
 }

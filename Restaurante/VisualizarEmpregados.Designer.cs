@@ -41,7 +41,7 @@
             // 
             // repositorioEmpregadoBindingSource
             // 
-            this.repositorioEmpregadoBindingSource.DataSource = typeof(Restaurante.Models.RepositorioEmpregado);
+            this.repositorioEmpregadoBindingSource.DataSource = typeof(Restaurante.Models.RepositorioCozinheiros);
             // 
             // dataGridView1
             // 
@@ -54,15 +54,16 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1449, 428);
             this.dataGridView1.TabIndex = 17;
-           
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             // 
             // repositorioEmpregadoBindingSource1
             // 
-            this.repositorioEmpregadoBindingSource1.DataSource = typeof(Restaurante.Models.RepositorioEmpregado);
+            this.repositorioEmpregadoBindingSource1.DataSource = typeof(Restaurante.Models.RepositorioCozinheiros);
             // 
             // repositorioEmpregadoBindingSource2
             // 
-            this.repositorioEmpregadoBindingSource2.DataSource = typeof(Restaurante.Models.RepositorioEmpregado);
+            this.repositorioEmpregadoBindingSource2.DataSource = typeof(Restaurante.Models.RepositorioCozinheiros);
             // 
             // VisualizarEmpregados
             // 

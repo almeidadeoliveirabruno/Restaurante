@@ -43,8 +43,6 @@
             this.CPFInput = new System.Windows.Forms.TextBox();
             this.NomeInput = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.FuncaoListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SalarioInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -53,7 +51,7 @@
             // 
             this.VisualizarClientes.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.VisualizarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisualizarClientes.Location = new System.Drawing.Point(1601, 489);
+            this.VisualizarClientes.Location = new System.Drawing.Point(1171, 821);
             this.VisualizarClientes.Name = "VisualizarClientes";
             this.VisualizarClientes.Size = new System.Drawing.Size(350, 150);
             this.VisualizarClientes.TabIndex = 31;
@@ -65,7 +63,7 @@
             // 
             this.Cadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cadastrar.Location = new System.Drawing.Point(1601, 237);
+            this.Cadastrar.Location = new System.Drawing.Point(1582, 821);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(350, 150);
             this.Cadastrar.TabIndex = 30;
@@ -76,7 +74,7 @@
             // EmailInput
             // 
             this.EmailInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailInput.Location = new System.Drawing.Point(913, 467);
+            this.EmailInput.Location = new System.Drawing.Point(751, 467);
             this.EmailInput.Name = "EmailInput";
             this.EmailInput.Size = new System.Drawing.Size(650, 75);
             this.EmailInput.TabIndex = 29;
@@ -87,7 +85,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(586, 473);
+            this.Email.Location = new System.Drawing.Point(424, 473);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(181, 69);
             this.Email.TabIndex = 28;
@@ -96,7 +94,7 @@
             // TelefoneInput
             // 
             this.TelefoneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelefoneInput.Location = new System.Drawing.Point(916, 585);
+            this.TelefoneInput.Location = new System.Drawing.Point(754, 585);
             this.TelefoneInput.Name = "TelefoneInput";
             this.TelefoneInput.Size = new System.Drawing.Size(650, 75);
             this.TelefoneInput.TabIndex = 27;
@@ -108,7 +106,7 @@
             // 
             this.Telefone.AutoSize = true;
             this.Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefone.Location = new System.Drawing.Point(586, 591);
+            this.Telefone.Location = new System.Drawing.Point(424, 591);
             this.Telefone.Name = "Telefone";
             this.Telefone.Size = new System.Drawing.Size(263, 69);
             this.Telefone.TabIndex = 26;
@@ -117,7 +115,7 @@
             // EnderecoInput
             // 
             this.EnderecoInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnderecoInput.Location = new System.Drawing.Point(916, 703);
+            this.EnderecoInput.Location = new System.Drawing.Point(754, 703);
             this.EnderecoInput.Name = "EnderecoInput";
             this.EnderecoInput.Size = new System.Drawing.Size(650, 75);
             this.EnderecoInput.TabIndex = 25;
@@ -128,7 +126,7 @@
             // 
             this.Endereco.AutoSize = true;
             this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Endereco.Location = new System.Drawing.Point(586, 709);
+            this.Endereco.Location = new System.Drawing.Point(424, 709);
             this.Endereco.Name = "Endereco";
             this.Endereco.Size = new System.Drawing.Size(285, 69);
             this.Endereco.TabIndex = 24;
@@ -138,7 +136,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(586, 237);
+            this.label2.Location = new System.Drawing.Point(424, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(570, 69);
             this.label2.TabIndex = 23;
@@ -148,7 +146,7 @@
             // 
             this.CPF.AutoSize = true;
             this.CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPF.Location = new System.Drawing.Point(586, 355);
+            this.CPF.Location = new System.Drawing.Point(424, 355);
             this.CPF.Name = "CPF";
             this.CPF.Size = new System.Drawing.Size(150, 69);
             this.CPF.TabIndex = 22;
@@ -158,7 +156,7 @@
             // 
             this.Nome.AutoSize = true;
             this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.Location = new System.Drawing.Point(586, 119);
+            this.Nome.Location = new System.Drawing.Point(424, 119);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(189, 69);
             this.Nome.TabIndex = 21;
@@ -168,7 +166,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1211, 237);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1049, 237);
             this.dateTimePicker1.MaxDate = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(349, 75);
@@ -178,7 +176,7 @@
             // CPFInput
             // 
             this.CPFInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPFInput.Location = new System.Drawing.Point(910, 349);
+            this.CPFInput.Location = new System.Drawing.Point(748, 349);
             this.CPFInput.Name = "CPFInput";
             this.CPFInput.Size = new System.Drawing.Size(650, 75);
             this.CPFInput.TabIndex = 19;
@@ -189,7 +187,7 @@
             // NomeInput
             // 
             this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeInput.Location = new System.Drawing.Point(913, 113);
+            this.NomeInput.Location = new System.Drawing.Point(751, 113);
             this.NomeInput.Name = "NomeInput";
             this.NomeInput.Size = new System.Drawing.Size(650, 75);
             this.NomeInput.TabIndex = 18;
@@ -200,45 +198,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(565, 15);
+            this.label1.Location = new System.Drawing.Point(403, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(899, 95);
             this.label1.TabIndex = 17;
             this.label1.Text = "Cadastro Funcionários";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(586, 833);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 69);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Função";
-            // 
-            // FuncaoListBox
-            // 
-            this.FuncaoListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FuncaoListBox.FormattingEnabled = true;
-            this.FuncaoListBox.ItemHeight = 46;
-            this.FuncaoListBox.Items.AddRange(new object[] {
-            "Garçom",
-            "Chef",
-            "Cozinheiro",
-            "Caixa",
-            "Gerente"});
-            this.FuncaoListBox.Location = new System.Drawing.Point(913, 852);
-            this.FuncaoListBox.Name = "FuncaoListBox";
-            this.FuncaoListBox.ScrollAlwaysVisible = true;
-            this.FuncaoListBox.Size = new System.Drawing.Size(280, 50);
-            this.FuncaoListBox.TabIndex = 33;
-            this.FuncaoListBox.Enter += new System.EventHandler(this.Input_Enter);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1269, 827);
+            this.label4.Location = new System.Drawing.Point(436, 821);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(217, 69);
             this.label4.TabIndex = 34;
@@ -247,7 +217,7 @@
             // SalarioInput
             // 
             this.SalarioInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalarioInput.Location = new System.Drawing.Point(1557, 821);
+            this.SalarioInput.Location = new System.Drawing.Point(748, 821);
             this.SalarioInput.Name = "SalarioInput";
             this.SalarioInput.Size = new System.Drawing.Size(280, 75);
             this.SalarioInput.TabIndex = 35;
@@ -263,8 +233,6 @@
             this.ClientSize = new System.Drawing.Size(1839, 1055);
             this.Controls.Add(this.SalarioInput);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.FuncaoListBox);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.VisualizarClientes);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.EmailInput);
@@ -299,8 +267,6 @@
             this.Controls.SetChildIndex(this.EmailInput, 0);
             this.Controls.SetChildIndex(this.Cadastrar, 0);
             this.Controls.SetChildIndex(this.VisualizarClientes, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.FuncaoListBox, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.SalarioInput, 0);
             this.ResumeLayout(false);
@@ -325,8 +291,6 @@
         private System.Windows.Forms.TextBox CPFInput;
         private System.Windows.Forms.TextBox NomeInput;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox FuncaoListBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox SalarioInput;
     }

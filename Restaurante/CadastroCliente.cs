@@ -189,20 +189,5 @@ namespace Restaurante
             Nome.Text = "Teste";
         }
 
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button2_DragEnter(object sender, DragEventArgs e)
-        {
-
-        }
-
-        private void TelefoneInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

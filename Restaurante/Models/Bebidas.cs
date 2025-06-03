@@ -11,7 +11,7 @@ namespace Restaurante.Models
     {
         public string Nome { get; set; }
         public Boolean Alcool { get;  set; }
-        public int Id { get; set; }
+        public int Id { get;  set; }
         public decimal Preco { get;  set; }
         public int Quantidade { get; set; } = 0;
         public string CaminhoImagem { get; set; }

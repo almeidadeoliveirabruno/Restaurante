@@ -12,7 +12,7 @@ namespace Restaurante.Models
         public string Nome { get; set; }
         public decimal Preco { get; set; }
         static int GeradorPratoId { get; set; } = 1;
-        public TimeSpan TempoPreparo { get; private set; }
+        public TimeSpan TempoPreparo { get; set; }
         public int Quantidade { get; set; } = 0;
         public string CaminhoImagem { get; set; }
         public Pratos(string nome, decimal preco, int minutos, string caminhoImagem)

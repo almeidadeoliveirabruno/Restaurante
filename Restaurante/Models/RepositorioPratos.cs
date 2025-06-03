@@ -53,13 +53,18 @@ namespace Restaurante.Models
         {
             return Pratos.FirstOrDefault(p => p.Id == id);
         }
-        public static void RemoverPrato(int id)
+        public static bool RemoverPrato(int id)
         {
-            var prato = ObterPratoPorId(id);
+         var prato = Pratos.FirstOrDefault(p => p.Id == id);
             if (prato != null)
             {
-                Pratos.Remove(prato);
+                    Pratos.Remove(prato);
+                    return true; // Retorna true se o prato foi removido com sucesso
+           }
+            else
+                {
+                    return false; // Retorna false se o prato não pôde ser removido porque está em um pedido
+                }
             }
-        }
     }
 }

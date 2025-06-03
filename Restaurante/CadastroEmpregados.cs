@@ -16,7 +16,6 @@ namespace Restaurante
         public CadastroEmpregados()
         {
             InitializeComponent();
-            FuncaoListBox.SelectedIndex = 0; // Seleciona o primeiro item
         }
 
         private void CadastroCozinheiro_Load(object sender, EventArgs e)
@@ -87,7 +86,7 @@ namespace Restaurante
                 EnderecoInput.Focus();
             }
 
-            else if (RepositorioEmpregado.VerificaSeFuncionarioExiste(CPFInput.Text))
+            else if (RepositorioCozinheiros.VerificaSeFuncionarioExiste(CPFInput.Text))
             {
                 MessageBox.Show("O cpf já existe.");
                 CPFInput.Focus();
@@ -104,13 +103,12 @@ namespace Restaurante
                     SalarioInput.Focus();
                     return;
                 }
-                RepositorioEmpregado.Adicionar(new Cozinheiro(
+                RepositorioCozinheiros.Adicionar(new Cozinheiro(
                     nome: NomeInput.Text,
                     cpf: CPFInput.Text,
                     telefone: TelefoneInput.Text,
                     endereco: EnderecoInput.Text,
                     datanascimento: DateTime.Now,
-                    funcaoEmpregado: FuncaoListBox.SelectedItem?.ToString() ?? "Não especificado",
                     email: EmailInput.Text,
                     salario: Decimal.Parse(SalarioInput.Text))
                 );
