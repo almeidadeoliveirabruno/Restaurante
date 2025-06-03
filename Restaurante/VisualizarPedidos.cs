@@ -21,11 +21,11 @@ namespace Restaurante
         private void VisualizarPedidos_Load(object sender, EventArgs e)
         {
             flowLayoutPedidos.Controls.Clear();
-            foreach (var pedido in RepositorioBebidas.Bebidas)
+            foreach (var pedido in RepositorioPedidos.PedidosRealizados)
             {
-                var item = new BebidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
+                var item = new PedidosControl(pedido);
                 item.Margin = new Padding(13);
-                //flowLayoutPanelBebidas.Controls.Add(item);
+                flowLayoutPedidos.Controls.Add(item);
             }
         }
     }

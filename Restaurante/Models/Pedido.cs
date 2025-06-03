@@ -18,6 +18,7 @@ namespace Restaurante.Models
         public int Id { get; set; }
         static int GeradorPedidoId = 1;
         public DateTime DataHoraPedido { get; set; } = DateTime.Now;
+        public DateTime DataHoraEntrega { get; set; }
         public StatusPedido status { get; set; } = StatusPedido.EmAndamento;   
         public decimal PrecoTotal { get; set; }
         public Cliente Cliente { get; set; } 
@@ -42,9 +43,16 @@ namespace Restaurante.Models
         {
             PrecoTotal = ItensPratos.Sum(p => p.Preco * p.Quantidade) + ItensBebidas.Sum(b => b.Preco * b.Quantidade);
         }
+        public void CalcularTempo()
+        {
+            if (ItensPratos.Count > 0)
+            {
+                TimeSpan tempoPratos = ItensPratos.Max(p => p.TempoPreparo);
+                DataHoraEntrega = DataHoraPedido.Add(tempoPratos);
+            }
+            DataHoraEntrega = DataHoraPedido;
+        }
     }
 
-    public class Class1
-    {
-    }
+  
 }

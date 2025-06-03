@@ -34,8 +34,14 @@ namespace Restaurante
                 {
                     lblComida.Text += $"{item.Nome} : ({item.Quantidade})\n";
                 }
+               
             }
-           
+            lblMesa.Text = $"Mesa: {pedido.Mesa.Numero}";
+            lblId.Text = $"ID: {pedido.Id}";
+            lblNome.Text = $"Cliente: {pedido.Cliente.Nome}";
+            lblprecoTotal.Text = $"Preço Total: R$ {pedido.PrecoTotal:F2}";
+            pedido.CalcularTempo();
+            lblTempoEstimado.Text = $"Hora da Entrega Estimada: {pedido.DataHoraEntrega:HH:mm}";
         }
     }
 }
