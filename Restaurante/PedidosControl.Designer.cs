@@ -38,6 +38,7 @@
             this.Bebida = new System.Windows.Forms.Label();
             this.lblComida = new System.Windows.Forms.Label();
             this.lblBebida = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblprecoTotal);
             this.panel1.Controls.Add(this.lblTempoEstimado);
             this.panel1.Controls.Add(this.lblMesa);
@@ -144,17 +146,26 @@
             this.lblBebida.TabIndex = 14;
             this.lblBebida.Text = "Info";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Location = new System.Drawing.Point(846, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1010, 319);
+            this.panel2.TabIndex = 11;
+            // 
             // PedidosControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblBebida);
             this.Controls.Add(this.lblComida);
             this.Controls.Add(this.Bebida);
             this.Controls.Add(this.Comida);
             this.Controls.Add(this.panel1);
             this.Name = "PedidosControl";
-            this.Size = new System.Drawing.Size(1740, 319);
+            this.Size = new System.Drawing.Size(1850, 319);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -173,5 +184,6 @@
         private System.Windows.Forms.Label Bebida;
         private System.Windows.Forms.Label lblComida;
         private System.Windows.Forms.Label lblBebida;
+        private System.Windows.Forms.Panel panel2;
     }
 }

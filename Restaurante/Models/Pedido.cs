@@ -50,7 +50,10 @@ namespace Restaurante.Models
                 TimeSpan tempoPratos = ItensPratos.Max(p => p.TempoPreparo);
                 DataHoraEntrega = DataHoraPedido.Add(tempoPratos);
             }
-            DataHoraEntrega = DataHoraPedido;
+            else
+            {
+                DataHoraEntrega = DataHoraPedido;
+            }
         }
     }
 

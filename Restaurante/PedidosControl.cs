@@ -19,23 +19,24 @@ namespace Restaurante
             CarregarPedidos(pedido);
         }
 
-      
+
 
         public void CarregarPedidos(Pedido pedido)
         {
-          
-           foreach (var item in pedido.ItensBebidas)
-           {
-               if (pedido.ItensBebidas.Count > 0)
-               {
-                   lblBebida.Text += $"{item.Nome} : ({item.Quantidade})\n";
-               }
-               if (pedido.ItensPratos.Count > 0)
-                {
-                    lblComida.Text += $"{item.Nome} : ({item.Quantidade})\n";
-                }
-               
+            Console.WriteLine($"A quantidade de pratos adicionada é: {pedido.ItensPratos.Count}");
+            Console.WriteLine($"A quantidade de Bebidas adicionada é: {pedido.ItensBebidas.Count}");
+            lblBebida.Text = "";  // Limpa o texto antes de adicionar
+            foreach (var item in pedido.ItensBebidas)
+            {
+                lblBebida.Text += $"{item.Nome} : ({item.Quantidade}){Environment.NewLine}";
             }
+
+            lblComida.Text = "";  // Limpa o texto antes de adicionar
+            foreach (var item in pedido.ItensPratos)
+            {
+                lblComida.Text += $"{item.Nome} : ({item.Quantidade}){Environment.NewLine}";
+            }
+
             lblMesa.Text = $"Mesa: {pedido.Mesa.Numero}";
             lblId.Text = $"ID: {pedido.Id}";
             lblNome.Text = $"Cliente: {pedido.Cliente.Nome}";
@@ -43,5 +44,6 @@ namespace Restaurante
             pedido.CalcularTempo();
             lblTempoEstimado.Text = $"Hora da Entrega Estimada: {pedido.DataHoraEntrega:HH:mm}";
         }
+
     }
 }

@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace Restaurante.Models
 {
-    public class Empregado: Pessoa
+    public class Empregado : Pessoa
     {
         public int IdEmpregado { get; private set; }
         static int GeradorEmpregadoId { get; set; } = 1;
-        public string FuncaoEmpregado { get; private set; }
+        public string FuncaoEmpregado { get; set; }
+        //public string Nome { get; set; }
+        public string Telefone { get; set; }
+        public string Endereco { get; set; }
+        public string Email { get; set; }
+        public DateTime DataNascimento { get; set; }
         public decimal Salario { get; set; }
 
 
@@ -20,10 +25,16 @@ namespace Restaurante.Models
             IdEmpregado = GeradorEmpregadoId;
             Salario = salario;
             GeradorEmpregadoId++;
+            Nome = nome;
+            Telefone = telefone;
+            Endereco = endereco;
+            Email = email;
+            DataNascimento = datanascimento;
+
         }
 
-        
 
-        
+
+
     }
 }

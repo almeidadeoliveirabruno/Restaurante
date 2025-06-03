@@ -14,13 +14,6 @@
       <FileName>Models\Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Restaurante.Models.Empregado">
-    <Position X="8" Y="5.5" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAQAAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAA=</HashCode>
-      <FileName>Models\Empregado.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Restaurante.Models.Mesa">
     <Position X="15.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
@@ -46,7 +39,7 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAQCAAAAAAAAAAAAAACCAAABAAAAAJIAAAAAAAQAAAA=</HashCode>
+      <HashCode>AAQCAAAAAAAAAAAAAACCAAABAAAAEJIAAAAAAAQAAAA=</HashCode>
       <FileName>Models\Pedido.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -113,9 +106,6 @@
       <HashCode>AAAAAQAAAABAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\RepositorioEmpregado.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Empregados" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Restaurante.Models.RepositorioPratos" Collapsed="true">
     <Position X="2" Y="7.25" Width="1.5" />
@@ -136,6 +126,13 @@
     <ShowAsCollectionAssociation>
       <Property Name="Mesas" />
     </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Restaurante.Models.Empregado">
+    <Position X="8" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAgSAAAAAAAAAAAAAAAAKAAAAAAAAAIAAAEAA=</HashCode>
+      <FileName>Models\Empregado.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="Restaurante.Models.IItens" Collapsed="true">
     <Position X="1.75" Y="10" Width="1.5" />

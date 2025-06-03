@@ -9,7 +9,7 @@ namespace Restaurante.Models
 {
     public abstract class Pessoa
     {
-        protected string nome;
+        protected string nome; 
         protected string cpf;
         protected string telefone;
         protected string endereco;
@@ -18,6 +18,7 @@ namespace Restaurante.Models
         public string Nome
         {
             get { return nome; }
+            set { nome = value; }
         }
         public string Telefone
         {
