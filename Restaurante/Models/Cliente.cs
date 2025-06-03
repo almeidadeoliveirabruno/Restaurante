@@ -9,9 +9,8 @@ namespace Restaurante.Models
 {
     public class Cliente : Pessoa
     {
-        public int ClienteID { get; private set; }
+        public int ClienteID { get; set; }
         static int geradorClienteId { get; set; } = 1;
-        public List <Pedido> HistoricoPedidos { get; set; } = new List<Pedido>();
        
         public string IdentificadorCombox
         {
@@ -26,11 +25,6 @@ namespace Restaurante.Models
         {
             ClienteID = geradorClienteId;
             geradorClienteId++;
-        }
-
-        public void AdicionarPedido(Pedido pedido)
-        {
-            HistoricoPedidos.Add(pedido);
         }
     }
 }

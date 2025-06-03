@@ -50,11 +50,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroEmpregados.cs">
+    <Compile Include="CadastroCozinheiros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroEmpregados.Designer.cs">
-      <DependentUpon>CadastroEmpregados.cs</DependentUpon>
+    <Compile Include="CadastroCozinheiros.Designer.cs">
+      <DependentUpon>CadastroCozinheiros.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroItens.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <Compile Include="VisualizarPedidos.Designer.cs">
       <DependentUpon>VisualizarPedidos.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CadastroEmpregados.resx">
-      <DependentUpon>CadastroEmpregados.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroCozinheiros.resx">
+      <DependentUpon>CadastroCozinheiros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroItens.resx">
       <DependentUpon>CadastroItens.cs</DependentUpon>

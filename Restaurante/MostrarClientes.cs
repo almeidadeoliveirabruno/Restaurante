@@ -85,6 +85,18 @@ namespace Restaurante
                 MessageBox.Show("Endereço não pode estar vazio.");
                 e.Cancel = true;
             }
+            if (columnName == "DataNascimento") { 
+                if (!DateTime.TryParse(value, out DateTime dataNascimento))
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Data de nascimento inválida.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (dataNascimento > DateTime.Today)
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("A data de nascimento não pode ser no futuro.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
 
@@ -93,6 +105,32 @@ namespace Restaurante
             CadastroCliente cadastroClientes = new CadastroCliente();
             cadastroClientes.Show();
             this.Close();
+        }
+
+        private void MostrarClientes_Load(object sender, EventArgs e)
+        {
+            
+            ComBoxCliente.DataSource = RepositorioCliente.Clientes;
+            ComBoxCliente.DisplayMember = "ClienteId";  
+            ComBoxCliente.ValueMember = "ClienteId";      
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (ComBoxCliente.SelectedValue == null)
+            {
+                MessageBox.Show("Selecione um cliente para remover.");
+                return;
+            }
+            else if (ComBoxCliente.SelectedValue is int idCliente)
+            {
+                if (RepositorioCliente.Remover(idCliente))
+                {
+                    MessageBox.Show("Cliente removido com sucesso!");
+                    return;
+                }
+                MessageBox.Show("Erro Cliente não encontrado.");
+            }
         }
     }
 }

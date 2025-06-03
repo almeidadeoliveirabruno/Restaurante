@@ -1,6 +1,6 @@
 ﻿namespace Restaurante
 {
-    partial class CadastroEmpregados
+    partial class CadastroCozinheiros
     {
         /// <summary>
         /// Required designer variable.
@@ -178,7 +178,7 @@
             this.CPFInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPFInput.Location = new System.Drawing.Point(748, 349);
             this.CPFInput.Name = "CPFInput";
-            this.CPFInput.Size = new System.Drawing.Size(650, 75);
+            this.CPFInput.Size = new System.Drawing.Size(1400, 75);
             this.CPFInput.TabIndex = 19;
             this.CPFInput.Enter += new System.EventHandler(this.Input_Enter);
             this.CPFInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CamposNumericosApenas);
@@ -189,7 +189,7 @@
             this.NomeInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomeInput.Location = new System.Drawing.Point(751, 113);
             this.NomeInput.Name = "NomeInput";
-            this.NomeInput.Size = new System.Drawing.Size(650, 75);
+            this.NomeInput.Size = new System.Drawing.Size(1400, 75);
             this.NomeInput.TabIndex = 18;
             this.NomeInput.Enter += new System.EventHandler(this.Input_Enter);
             this.NomeInput.Leave += new System.EventHandler(this.Input_Leave);

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class CadastroEmpregados: FormBase
+    public partial class CadastroCozinheiros: FormBase
     {
-        public CadastroEmpregados()
+        public CadastroCozinheiros()
         {
             InitializeComponent();
         }

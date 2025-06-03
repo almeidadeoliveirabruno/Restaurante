@@ -49,7 +49,19 @@ namespace Restaurante.Models
             return false;
         }
 
-        public static BindingList<Cliente> ObterTodos() => Clientes;
+            public static bool Remover(int id)
+            {
+                var cliente = RepositorioCliente.Clientes.FirstOrDefault(c => c.ClienteID == id);
+                if (cliente != null)
+                {
+                    Clientes.Remove(cliente);
+                return true; // Retorna true se o cliente foi removido com sucesso
+                }
+                else
+                {
+                    return false; // Retorna false se o cliente não foi encontrado
+            }
+            }
 
     }
 }

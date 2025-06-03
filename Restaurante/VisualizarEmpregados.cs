@@ -17,7 +17,7 @@ namespace Restaurante
         {
             InitializeComponent();
             dataGridView1.DataSource = null; // limpa a origem anterior
-            dataGridView1.DataSource = (RepositorioCozinheiros.Empregados);
+            dataGridView1.DataSource = (RepositorioCozinheiros.Cozinheiros);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.ReadOnly = false;
             dataGridView1.Columns["Cpf"].ReadOnly= true; 
@@ -41,7 +41,7 @@ namespace Restaurante
 
             switch (columnName)
             {
-                case "Nome":  // verifique o nome exato da coluna, pode ser "Nome" ou "nome"
+                case "Nome":  
                     if (string.IsNullOrWhiteSpace(novoValor))
                     {
                         e.Cancel = true;
@@ -73,8 +73,27 @@ namespace Restaurante
                     }
                     break;
 
-                    // Você pode adicionar mais validações para outras colunas conforme precisar
+                case "DataNascimento":
+                    if (!DateTime.TryParse(novoValor, out DateTime dataNascimento))
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("Data de nascimento inválida.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (dataNascimento > DateTime.Today)
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("A data de nascimento não pode ser no futuro.", "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    break;
+
             }
+        }
+
+        private void VisualizarEmpregados_Load(object sender, EventArgs e)
+        {
+            ComBoxCozinheiro.DataSource = RepositorioCozinheiros.Cozinheiros;
+            ComBoxCozinheiro.DisplayMember = "CozinheiroID"; // O que aparece na ComboBox
+            ComBoxCozinheiro.ValueMember = "IdCozinheiro"; // O valor associado ao item selecionado
         }
     }
 }

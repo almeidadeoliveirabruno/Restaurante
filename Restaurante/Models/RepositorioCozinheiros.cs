@@ -9,7 +9,7 @@ namespace Restaurante.Models
 {
     public static class RepositorioCozinheiros
     {
-        public static List<Cozinheiro> Empregados { get; private set; } = new List<Cozinheiro>();
+        public static List<Cozinheiro> Cozinheiros { get; private set; } = new List<Cozinheiro>();
         static RepositorioCozinheiros()
         {
             Adicionar(new Cozinheiro(
@@ -40,13 +40,13 @@ namespace Restaurante.Models
             {
                 return false; 
             }
-            Empregados.Add(f);
+            Cozinheiros.Add(f);
             return true;
         }
 
         public static bool VerificaSeFuncionarioExiste(string cpf)
         {
-            if (Empregados.Any(funcionario => funcionario.Cpf == cpf))
+            if (Cozinheiros.Any(funcionario => funcionario.Cpf == cpf))
             {
                 return true; 
             }
@@ -55,13 +55,13 @@ namespace Restaurante.Models
 
         public static void Remover(int id)
         {
-            var empregado = Empregados.FirstOrDefault(e => e.IdEmpregado == id);
+            var empregado = Cozinheiros.FirstOrDefault(e => e.IdCozinheiro == id);
             if (empregado != null)
             {
-                Empregados.Remove(empregado);
+                Cozinheiros.Remove(empregado);
             }
         }
-        public static List<Cozinheiro> ObterTodos() => Empregados;
+        public static List<Cozinheiro> ObterTodos() => Cozinheiros;
 
     }
 }

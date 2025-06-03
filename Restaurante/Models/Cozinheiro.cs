@@ -8,15 +8,14 @@ namespace Restaurante.Models
 {
     public class Cozinheiro : Pessoa
     {
-        public int IdEmpregado { get; private set; }
+        public int IdCozinheiro { get; private set; }
         static int GeradorEmpregadoId { get; set; } = 1;
         public decimal Salario { get; set; }
-        public int NumeroPedidosAtendendo { get; private set; } = 0;
 
 
         public Cozinheiro(string nome, string cpf, string telefone, string endereco, DateTime datanascimento, string email, decimal salario) : base(nome, cpf, telefone, endereco, datanascimento, email)
         {
-            IdEmpregado = GeradorEmpregadoId;
+            IdCozinheiro = GeradorEmpregadoId;
             Salario = salario;
             GeradorEmpregadoId++;
             Nome = nome;
@@ -25,19 +24,6 @@ namespace Restaurante.Models
             Email = email;
             DataNascimento = datanascimento;
 
-        }
-
-        public void AumentoNumeroPedidos()
-        {
-            NumeroPedidosAtendendo++;
-        }
-
-        public void DiminuiNumeroPedidos()
-        {
-            if (NumeroPedidosAtendendo > 0)
-            {
-                NumeroPedidosAtendendo--;
-            }
         }
 
 
