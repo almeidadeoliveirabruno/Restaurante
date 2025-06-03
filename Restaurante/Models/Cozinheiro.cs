@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurante.Models
 {
-    public class Empregado : Pessoa
+    public class Cozinheiro : Pessoa
     {
         public int IdEmpregado { get; private set; }
         static int GeradorEmpregadoId { get; set; } = 1;
@@ -14,7 +14,7 @@ namespace Restaurante.Models
         public decimal Salario { get; set; }
 
 
-        public Empregado(string nome, string cpf, string telefone, string endereco, DateTime datanascimento, string funcaoEmpregado, string email, decimal salario) : base(nome, cpf, telefone, endereco, datanascimento, email)
+        public Cozinheiro(string nome, string cpf, string telefone, string endereco, DateTime datanascimento, string funcaoEmpregado, string email, decimal salario) : base(nome, cpf, telefone, endereco, datanascimento, email)
         {
             FuncaoEmpregado = funcaoEmpregado;
             IdEmpregado = GeradorEmpregadoId;

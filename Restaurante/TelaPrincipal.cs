@@ -26,8 +26,8 @@ namespace Restaurante
 
         private void Iniciar_Click(object sender, EventArgs e)
         {
-            var cadastroItens = new CadastroItens();
-            cadastroItens.Show();
+            var realizarPedidos = new RealizarPedido();
+            realizarPedidos.Show();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

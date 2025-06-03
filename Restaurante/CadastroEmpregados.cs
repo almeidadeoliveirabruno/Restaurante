@@ -104,7 +104,7 @@ namespace Restaurante
                     SalarioInput.Focus();
                     return;
                 }
-                RepositorioEmpregado.Adicionar(new Empregado(
+                RepositorioEmpregado.Adicionar(new Cozinheiro(
                     nome: NomeInput.Text,
                     cpf: CPFInput.Text,
                     telefone: TelefoneInput.Text,

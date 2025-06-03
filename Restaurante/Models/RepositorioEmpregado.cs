@@ -9,10 +9,10 @@ namespace Restaurante.Models
 {
     public static class RepositorioEmpregado
     {
-        public static List<Empregado> Empregados { get; private set; } = new List<Empregado>();
+        public static List<Cozinheiro> Empregados { get; private set; } = new List<Cozinheiro>();
         static RepositorioEmpregado()
         {
-            Adicionar(new Empregado(
+            Adicionar(new Cozinheiro(
     nome: "João da Silva",
     cpf: "12345678900",
     telefone: "21999990000",
@@ -23,7 +23,7 @@ namespace Restaurante.Models
     salario: 3000.00m
 ));
 
-            Adicionar(new Empregado(
+            Adicionar(new Cozinheiro(
                 nome: "Maria Oliveira",
                 cpf: "98765432100",
                 telefone: "21988880000",
@@ -34,7 +34,7 @@ namespace Restaurante.Models
                 salario: 2000.00m
             ));
 
-            Adicionar(new Empregado(
+            Adicionar(new Cozinheiro(
                 nome: "Carlos Souza",
                 cpf: "45612378900",
                 telefone: "21977770000",
@@ -45,7 +45,7 @@ namespace Restaurante.Models
                 salario: 2500.00m
             ));
 
-            Adicionar(new Empregado(
+            Adicionar(new Cozinheiro(
                 nome: "Ana Costa",
                 cpf: "32198765400",
                 telefone: "21966660000",
@@ -56,7 +56,7 @@ namespace Restaurante.Models
                 salario: 5000.00m
             ));
 
-            Adicionar(new Empregado(
+            Adicionar(new Cozinheiro(
                 nome: "Pedro Santos",
                 cpf: "15975348600",
                 telefone: "21955550000",
@@ -69,7 +69,7 @@ namespace Restaurante.Models
 
         }
 
-        public static bool Adicionar(Empregado f)
+        public static bool Adicionar(Cozinheiro f)
         {
             if (VerificaSeFuncionarioExiste(f.Cpf))
             {
@@ -88,7 +88,7 @@ namespace Restaurante.Models
             return false;
         }
 
-        public static List<Empregado> ObterTodos() => Empregados;
+        public static List<Cozinheiro> ObterTodos() => Empregados;
 
     }
 }

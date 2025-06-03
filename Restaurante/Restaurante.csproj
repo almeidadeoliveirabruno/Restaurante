@@ -88,7 +88,7 @@
     </Compile>
     <Compile Include="Models\Bebidas.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Empregado.cs" />
+    <Compile Include="Models\Cozinheiro.cs" />
     <Compile Include="Models\IItens.cs" />
     <Compile Include="Models\Mesa.cs" />
     <Compile Include="Models\Pedido.cs" />
