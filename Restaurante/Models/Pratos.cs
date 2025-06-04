@@ -34,6 +34,7 @@ namespace Restaurante.Models
             TempoPreparo = TimeSpan.FromMinutes(minutos);
         }
 
+        // Impedir cópia por referencia
         public Pratos Clone()
         {
             var clone = new Pratos(this.Id,this.Nome, this.Preco, (int)this.TempoPreparo.TotalMinutes, this.CaminhoImagem);

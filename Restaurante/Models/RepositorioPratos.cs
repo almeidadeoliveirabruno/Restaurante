@@ -62,8 +62,8 @@ namespace Restaurante.Models
            }
             else
                 {
-                    return false; // Retorna false se o prato
-                }
+                    return false; // Retorna false se o prato n for removido porque n foi encontrado
+            }
             }
     }
 }
