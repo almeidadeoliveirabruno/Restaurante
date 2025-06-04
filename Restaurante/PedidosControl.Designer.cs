@@ -40,6 +40,7 @@
             this.Bebida = new System.Windows.Forms.Label();
             this.lblComida = new System.Windows.Forms.Label();
             this.lblBebida = new System.Windows.Forms.Label();
+            this.lblGarcom = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.lblGarcom);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblprecoTotal);
@@ -166,6 +168,16 @@
             this.lblBebida.TabIndex = 14;
             this.lblBebida.Text = "Info";
             // 
+            // lblGarcom
+            // 
+            this.lblGarcom.AutoSize = true;
+            this.lblGarcom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblGarcom.Location = new System.Drawing.Point(299, 333);
+            this.lblGarcom.Name = "lblGarcom";
+            this.lblGarcom.Size = new System.Drawing.Size(103, 29);
+            this.lblGarcom.TabIndex = 13;
+            this.lblGarcom.Text = "Garçom";
+            // 
             // PedidosControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,7 +189,7 @@
             this.Controls.Add(this.Comida);
             this.Controls.Add(this.panel1);
             this.Name = "PedidosControl";
-            this.Size = new System.Drawing.Size(2100, 385);
+            this.Size = new System.Drawing.Size(1866, 382);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.Label lblBebida;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblGarcom;
     }
 }

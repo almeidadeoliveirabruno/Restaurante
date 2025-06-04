@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class CadastroCozinheiros: FormBase
+    public partial class CadastroEmpregados: FormBase
     {
-        public CadastroCozinheiros()
+        public CadastroEmpregados()
         {
             InitializeComponent();
         }
 
         private void CadastroCozinheiro_Load(object sender, EventArgs e)
         {
-
+            //comboxFuncao.DataSource = RepositorioEmpregados.FuncaoEmpregados;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -110,20 +110,21 @@ namespace Restaurante
                     endereco: EnderecoInput.Text,
                     datanascimento: DateTime.Now,
                     email: EmailInput.Text,
-                    salario: Decimal.Parse(SalarioInput.Text))
-                );
+                    salario: Decimal.Parse(SalarioInput.Text)
+                ));
                 MessageBox.Show("Empregado cadastrado com sucesso!");
                 NomeInput.Clear();
                 CPFInput.Clear();
                 TelefoneInput.Clear();
                 EnderecoInput.Clear();
                 EmailInput.Clear();
+                SalarioInput.Clear();
             }
         }
 
         private void VisualizarClientes_Click(object sender, EventArgs e)
         {
-            VisualizarEmpregados visualizarEmpregados = new VisualizarEmpregados();
+            VisualizarCozinheiros visualizarEmpregados = new VisualizarCozinheiros();
             visualizarEmpregados.Show();
             this.Close();
         }

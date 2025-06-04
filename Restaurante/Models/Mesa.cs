@@ -15,16 +15,20 @@ namespace Restaurante.Models
         {
             Numero = numero;
         }
+
         public void VerificaMesasOcupadas()
         {
             Ocupada = false;
-            
+
+            // Verifica se há pedidos realizados para esta mesa
             foreach (var pedido in RepositorioPedidos.PedidosRealizados)
             {
+                //percorrendo pedido por pedido
               
                 if (pedido.Mesa.Numero == this.Numero)
                 {
-                    
+                    //compara se a mesa percorrida é a mesma que a mesa atual
+                    //se for, verifica o status do pedido
                     if (pedido.status == Pedido.StatusPedido.EmAndamento || pedido.status == Pedido.StatusPedido.Entregue)
                     {
                         Ocupada = true;

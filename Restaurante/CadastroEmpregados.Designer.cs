@@ -1,6 +1,6 @@
 ﻿namespace Restaurante
 {
-    partial class CadastroCozinheiros
+    partial class CadastroEmpregados
     {
         /// <summary>
         /// Required designer variable.
@@ -230,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1839, 1055);
+            this.ClientSize = new System.Drawing.Size(1836, 1055);
             this.Controls.Add(this.SalarioInput);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.VisualizarClientes);

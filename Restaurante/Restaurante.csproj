@@ -50,11 +50,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroCozinheiros.cs">
+    <Compile Include="CadastroEmpregados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroCozinheiros.Designer.cs">
-      <DependentUpon>CadastroCozinheiros.cs</DependentUpon>
+    <Compile Include="CadastroEmpregados.Designer.cs">
+      <DependentUpon>CadastroEmpregados.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroItens.cs">
       <SubType>Form</SubType>
@@ -100,11 +100,11 @@
     <Compile Include="Models\RepositorioMesa.cs" />
     <Compile Include="Models\RepositorioPedidos.cs" />
     <Compile Include="Models\RepositorioPratos.cs" />
-    <Compile Include="MostrarClientes.cs">
+    <Compile Include="VisualizarEmpregados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MostrarClientes.Designer.cs">
-      <DependentUpon>MostrarClientes.cs</DependentUpon>
+    <Compile Include="VisualizarEmpregados.Designer.cs">
+      <DependentUpon>VisualizarEmpregados.cs</DependentUpon>
     </Compile>
     <Compile Include="PedidosControl.cs">
       <SubType>UserControl</SubType>
@@ -126,11 +126,11 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisualizarEmpregados.cs">
+    <Compile Include="VisualizarCozinheiros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VisualizarEmpregados.Designer.cs">
-      <DependentUpon>VisualizarEmpregados.cs</DependentUpon>
+    <Compile Include="VisualizarCozinheiros.Designer.cs">
+      <DependentUpon>VisualizarCozinheiros.cs</DependentUpon>
     </Compile>
     <Compile Include="VisualizarItens.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <Compile Include="VisualizarPedidos.Designer.cs">
       <DependentUpon>VisualizarPedidos.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CadastroCozinheiros.resx">
-      <DependentUpon>CadastroCozinheiros.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroEmpregados.resx">
+      <DependentUpon>CadastroEmpregados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroItens.resx">
       <DependentUpon>CadastroItens.cs</DependentUpon>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="BebidaPedidoControl.resx">
       <DependentUpon>BebidaPedidoControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MostrarClientes.resx">
-      <DependentUpon>MostrarClientes.cs</DependentUpon>
+    <EmbeddedResource Include="VisualizarEmpregados.resx">
+      <DependentUpon>VisualizarEmpregados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PedidosControl.resx">
       <DependentUpon>PedidosControl.cs</DependentUpon>
@@ -190,8 +190,8 @@
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VisualizarEmpregados.resx">
-      <DependentUpon>VisualizarEmpregados.cs</DependentUpon>
+    <EmbeddedResource Include="VisualizarCozinheiros.resx">
+      <DependentUpon>VisualizarCozinheiros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarItens.resx">
       <DependentUpon>VisualizarItens.cs</DependentUpon>

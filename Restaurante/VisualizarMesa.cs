@@ -27,12 +27,15 @@ namespace Restaurante
             foreach (var mesa in RepositorioMesa.Mesas)
             {
                 mesa.VerificaMesasOcupadas();
+                //cria o botão para cada mesa
                 Button btn = new Button();
+
                 btn.Text = $"Mesa {mesa.Numero}";
                 btn.Width = 150;
                 btn.Height = 180;
                 //btn.Tag = mesa;
-                btn.BackColor = mesa.Ocupada ? Color.LightCoral : Color.LightGreen;
+                // a mesa está ocupado ? se for verdadeiro color.LightCoral, se for falso color.LightGreen
+                btn.BackColor = mesa.Ocupada ? Color.Red : Color.LightGreen;
                 flowLayoutPanelMesas.Controls.Add(btn);
             }
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Restaurante.Models
 {
@@ -13,29 +14,30 @@ namespace Restaurante.Models
         
         static RepositorioPratos()
         {
-            // Adicionando um prato de exemplo
             var pratoTeste = new Pratos(
-                nome: "Feijoada",
-                preco: 45.00m,
-                minutos: 60,
-                caminhoImagem: "Resources\\Restaurante-Comida-Feijoada.png" 
-            );
+       nome: "Feijoada",
+       preco: 45.00m,
+       minutos: 60,
+       caminhoImagem: Path.Combine("Resources", "Restaurante-Comida-Feijoada.png")
+   );
             AdicionarPrato(pratoTeste);
+
             var pratoTeste2 = new Pratos(
                 nome: "Pizza Margherita",
                 preco: 30.00m,
                 minutos: 30,
-                caminhoImagem: "Resources\\Restaurante-Comida-Pizza.png"
+                caminhoImagem: Path.Combine("Resources", "Restaurante-Comida-Pizza.png")
             );
             AdicionarPrato(pratoTeste2);
+
             var pratoTeste3 = new Pratos(
                 nome: "Hambúrguer",
                 preco: 25.00m,
                 minutos: 20,
-                caminhoImagem: "Resources\\Hamburguer125125.png"
+                caminhoImagem: Path.Combine("Resources", "Hamburguer125125.png")
             );
             AdicionarPrato(pratoTeste3);
-            
+
         }
         public static void AdicionarPrato(Pratos prato)
         {
@@ -45,10 +47,7 @@ namespace Restaurante.Models
         {
             return Pratos.Any(i => i.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
         }
-        public static List<Pratos> ObterTodosPratos()
-        {
-            return Pratos;
-        }
+       
         public static Pratos ObterPratoPorId(int id)
         {
             return Pratos.FirstOrDefault(p => p.Id == id);
@@ -63,7 +62,7 @@ namespace Restaurante.Models
            }
             else
                 {
-                    return false; // Retorna false se o prato não pôde ser removido porque está em um pedido
+                    return false; // Retorna false se o prato
                 }
             }
     }

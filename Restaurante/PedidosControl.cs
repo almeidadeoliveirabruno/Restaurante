@@ -36,6 +36,7 @@ namespace Restaurante
             {
                 lblComida.Text += $"{item.Nome} : ({item.Quantidade}){Environment.NewLine}";
             }
+            lblGarcom.Text = $"Garçom: {pedido.Cozinheiro.Nome}";
 
             lblMesa.Text = $"Mesa: {pedido.Mesa.Numero}";
             lblId.Text = $"ID: {pedido.Id}";

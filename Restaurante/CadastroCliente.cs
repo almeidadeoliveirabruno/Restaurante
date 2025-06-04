@@ -174,7 +174,7 @@ namespace Restaurante
 
         private void VisualizarClientes_Click(object sender, EventArgs e)
         {
-            MostrarClientes mostrarClientes = new MostrarClientes();
+            VisualizarEmpregados mostrarClientes = new VisualizarEmpregados();
             mostrarClientes.Show(); // abre o form como janela independente
             this.Close(); // fecha o form atual
         }

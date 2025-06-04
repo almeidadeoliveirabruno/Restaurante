@@ -39,6 +39,8 @@
             this.Mesa = new System.Windows.Forms.Label();
             this.Cadastrar = new System.Windows.Forms.Button();
             this.VisualizarPedidoButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxGarcom = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // flowLayoutPanelBebidas
@@ -159,11 +161,35 @@
             this.VisualizarPedidoButton.UseVisualStyleBackColor = false;
             this.VisualizarPedidoButton.Click += new System.EventHandler(this.VisualizarPedidoButton_Click);
             // 
-            // RealizarPedidocs
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(897, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 42);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Garçom";
+            // 
+            // comboBoxGarcom
+            // 
+            this.comboBoxGarcom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxGarcom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxGarcom.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGarcom.FormattingEnabled = true;
+            this.comboBoxGarcom.Location = new System.Drawing.Point(1072, 43);
+            this.comboBoxGarcom.Name = "comboBoxGarcom";
+            this.comboBoxGarcom.Size = new System.Drawing.Size(400, 50);
+            this.comboBoxGarcom.Sorted = true;
+            this.comboBoxGarcom.TabIndex = 31;
+            // 
+            // RealizarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxGarcom);
             this.Controls.Add(this.VisualizarPedidoButton);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.Mesa);
@@ -176,7 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanelBebidas);
             this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "RealizarPedidocs";
+            this.Name = "RealizarPedido";
             this.Text = "RealizarPedidocs";
             this.Load += new System.EventHandler(this.RealizarPedidocs_Load);
             this.Controls.SetChildIndex(this.flowLayoutPanelBebidas, 0);
@@ -190,6 +216,8 @@
             this.Controls.SetChildIndex(this.Mesa, 0);
             this.Controls.SetChildIndex(this.Cadastrar, 0);
             this.Controls.SetChildIndex(this.VisualizarPedidoButton, 0);
+            this.Controls.SetChildIndex(this.comboBoxGarcom, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +236,7 @@
         private System.Windows.Forms.Label Mesa;
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.Button VisualizarPedidoButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxGarcom;
     }
 }

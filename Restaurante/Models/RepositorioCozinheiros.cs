@@ -9,7 +9,7 @@ namespace Restaurante.Models
 {
     public static class RepositorioCozinheiros
     {
-        public static List<Cozinheiro> Cozinheiros { get; private set; } = new List<Cozinheiro>();
+        public static BindingList<Cozinheiro> Cozinheiros { get; private set; } = new BindingList<Cozinheiro>();
         static RepositorioCozinheiros()
         {
             Adicionar(new Cozinheiro(
@@ -31,7 +31,14 @@ namespace Restaurante.Models
                 email: "maria.oliveira@example.com",
                 salario: 2000.00m
             ));
-
+            Adicionar(new Cozinheiro(
+                nome: "Carlos Pereira",
+                cpf: "45678912300",
+                telefone: "21977770000",
+                endereco: "Rua C, 789",
+                datanascimento: new DateTime(1992, 3, 15),
+                email: "Carlos.Pereira@Algodiferentedeexample.com",
+                salario: 2500.00m));
         }
 
         public static bool Adicionar(Cozinheiro f)
@@ -61,7 +68,6 @@ namespace Restaurante.Models
                 Cozinheiros.Remove(empregado);
             }
         }
-        public static List<Cozinheiro> ObterTodos() => Cozinheiros;
 
     }
 }

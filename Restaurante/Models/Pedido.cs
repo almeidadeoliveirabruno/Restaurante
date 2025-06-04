@@ -25,7 +25,8 @@ namespace Restaurante.Models
         public List<Pratos> ItensPratos { get; set; } = new List<Pratos>();
         public List<Bebidas> ItensBebidas { get; set; } = new List<Bebidas>();
         public Mesa Mesa { get; set; }
-        public Pedido(Cliente cliente, List<Pratos> prato, List<Bebidas> bebida, Mesa mesa)
+        public Cozinheiro Cozinheiro { get; set; }
+        public Pedido(Cliente cliente, List<Pratos> prato, List<Bebidas> bebida, Mesa mesa, Cozinheiro cozinheiro)
         {
             Id = GeradorPedidoId++;
             Cliente = cliente;
@@ -38,6 +39,7 @@ namespace Restaurante.Models
                 ItensBebidas = bebida;
             }
             Mesa = mesa;
+            Cozinheiro = cozinheiro;
         }
         public void CalcularPrecoTotal()
         {
