@@ -45,7 +45,7 @@ namespace Restaurante
             flowLayoutPanelComidas.Controls.Clear();
             foreach (var pedido in RepositorioPratos.Pratos)
             {
-                var item = new ComidaPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
+                var item = new PratoPedidoControl(pedido.Nome, pedido.Preco, pedido.Id, pedido.CaminhoImagem);
                 item.Margin = new Padding(13);
                 item.AoAtualizarQuantidadeComida = AtualizarPedidoComida;
                 flowLayoutPanelComidas.Controls.Add(item);

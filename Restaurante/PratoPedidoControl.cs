@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class ComidaPedidoControl: UserControl
+    public partial class PratoPedidoControl: UserControl
     {
-        public ComidaPedidoControl()
+        public PratoPedidoControl()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Restaurante
         public int Id { get; set; }
         public int Quantidade { get; set; } = 0;
         public Action<int, int> AoAtualizarQuantidadeComida; // envia nome e quantidade
-        public ComidaPedidoControl(string nomeProduto, decimal preco, int id, string caminhoImagem)
+        public PratoPedidoControl(string nomeProduto, decimal preco, int id, string caminhoImagem)
         {
             InitializeComponent();
             NomeProduto = nomeProduto;

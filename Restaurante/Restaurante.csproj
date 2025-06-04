@@ -62,11 +62,11 @@
     <Compile Include="CadastroItens.Designer.cs">
       <DependentUpon>CadastroItens.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComidaPedidoControl.cs">
+    <Compile Include="PratoPedidoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ComidaPedidoControl.Designer.cs">
-      <DependentUpon>ComidaPedidoControl.cs</DependentUpon>
+    <Compile Include="PratoPedidoControl.Designer.cs">
+      <DependentUpon>PratoPedidoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CadastroCliente.cs">
       <SubType>Form</SubType>
@@ -156,8 +156,8 @@
     <EmbeddedResource Include="CadastroItens.resx">
       <DependentUpon>CadastroItens.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComidaPedidoControl.resx">
-      <DependentUpon>ComidaPedidoControl.cs</DependentUpon>
+    <EmbeddedResource Include="PratoPedidoControl.resx">
+      <DependentUpon>PratoPedidoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>

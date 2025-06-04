@@ -37,7 +37,7 @@
             this.flowLayoutPedidos.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.flowLayoutPedidos.Location = new System.Drawing.Point(-20, -1);
             this.flowLayoutPedidos.Name = "flowLayoutPedidos";
-            this.flowLayoutPedidos.Size = new System.Drawing.Size(1900, 863);
+            this.flowLayoutPedidos.Size = new System.Drawing.Size(1926, 863);
             this.flowLayoutPedidos.TabIndex = 0;
             // 
             // VisualizarPedidos
