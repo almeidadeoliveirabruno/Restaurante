@@ -11,22 +11,14 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class CadastroEmpregados: FormBase
+    public partial class CadastroCozinheiros: FormBase
     {
-        public CadastroEmpregados()
+        public CadastroCozinheiros()
         {
             InitializeComponent();
         }
 
-        private void CadastroCozinheiro_Load(object sender, EventArgs e)
-        {
-            //comboxFuncao.DataSource = RepositorioEmpregados.FuncaoEmpregados;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void CamposNumericosApenas(object sender, KeyPressEventArgs e)
         {
@@ -130,11 +122,6 @@ namespace Restaurante
         }
 
        
-
-        private void CPFInput_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
 
         private void ValidacaoDinheiro(object sender, KeyPressEventArgs e)
         {

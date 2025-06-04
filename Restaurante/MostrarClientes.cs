@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Restaurante
 {
-    public partial class VisualizarEmpregados: FormBase
+    public partial class MostrarClientes: FormBase
     {
-        public VisualizarEmpregados()
+        public MostrarClientes()
         {
             InitializeComponent();
             dataGridView1.DataSource = null; 

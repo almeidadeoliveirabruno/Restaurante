@@ -12,6 +12,7 @@ namespace Restaurante.Models
     {
         public static List<Pratos> Pratos = new List<Pratos>();
         
+        
         static RepositorioPratos()
         {
             var pratoTeste = new Pratos(

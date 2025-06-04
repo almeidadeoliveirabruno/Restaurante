@@ -146,7 +146,6 @@
             this.TempoEstimadoText.TabIndex = 26;
             this.TempoEstimadoText.Text = "Tempo Estimado (minutos)";
             this.TempoEstimadoText.Visible = false;
-            this.TempoEstimadoText.Click += new System.EventHandler(this.TempoEstimadoText_Click);
             // 
             // TempoEstimadoInput
             // 

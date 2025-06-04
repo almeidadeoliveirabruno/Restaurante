@@ -84,7 +84,6 @@ namespace Restaurante
             this.NomeInput.Name = "NomeInput";
             this.NomeInput.Size = new System.Drawing.Size(888, 75);
             this.NomeInput.TabIndex = 1;
-            this.NomeInput.TextChanged += new System.EventHandler(this.Nome_TextChanged);
             this.NomeInput.Enter += new System.EventHandler(this.NomeInput_Enter);
             this.NomeInput.Leave += new System.EventHandler(this.NomeInput_Leave_1);
             // 
@@ -95,7 +94,6 @@ namespace Restaurante
             this.CPFInput.Name = "CPFInput";
             this.CPFInput.Size = new System.Drawing.Size(891, 75);
             this.CPFInput.TabIndex = 2;
-            this.CPFInput.TextChanged += new System.EventHandler(this.CPF_TextChanged);
             this.CPFInput.Enter += new System.EventHandler(this.CPFInput_Enter);
             this.CPFInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.CPFInput.Leave += new System.EventHandler(this.CPFInput_Leave);
@@ -110,7 +108,6 @@ namespace Restaurante
             this.dateTimePicker1.Size = new System.Drawing.Size(349, 75);
             this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2025, 5, 25, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // Nome
             // 
@@ -151,7 +148,6 @@ namespace Restaurante
             this.Endereco.Size = new System.Drawing.Size(285, 69);
             this.Endereco.TabIndex = 7;
             this.Endereco.Text = "Endereço";
-            this.Endereco.Click += new System.EventHandler(this.label3_Click);
             // 
             // EnderecoInput
             // 
@@ -328,8 +324,6 @@ namespace Restaurante
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "Form1";
             this.Text = "8";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.NomeInput, 0);
             this.Controls.SetChildIndex(this.CPFInput, 0);

@@ -1,6 +1,6 @@
 ﻿namespace Restaurante
 {
-    partial class VisualizarEmpregados
+    partial class MostrarClientes
     {
         /// <summary>
         /// Required designer variable.

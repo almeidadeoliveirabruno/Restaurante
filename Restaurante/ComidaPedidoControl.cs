@@ -33,16 +33,16 @@ namespace Restaurante
             lblQuantidade.Text = Quantidade.ToString();
             Id = id;
         }
-        public void ResetarQuantidade()
-        {
-            Quantidade = 0; // idem acima
-            lblQuantidade.Text = Quantidade.ToString(); 
-        }
+        //public void ResetarQuantidade()
+        //{
+        //    Quantidade = 0; // idem acima
+        //    lblQuantidade.Text = Quantidade.ToString(); 
+        //}
         private void btnMais_Click(object sender, EventArgs e)
         {
             Quantidade++;
             lblQuantidade.Text = Quantidade.ToString();
-            AoAtualizarQuantidadeComida?.Invoke(Id, Quantidade); // Notifica a atualização da quantidade
+            AoAtualizarQuantidadeComida?.Invoke(Id, Quantidade); 
         }
         private void btnMenos_Click(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace Restaurante
             {
                 Quantidade--;
                 lblQuantidade.Text = Quantidade.ToString();
-                AoAtualizarQuantidadeComida?.Invoke(Id, Quantidade); // Notifica a atualização da quantidade
+                AoAtualizarQuantidadeComida?.Invoke(Id, Quantidade); 
             }
         }
 

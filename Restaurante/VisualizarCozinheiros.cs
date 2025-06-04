@@ -122,7 +122,7 @@ namespace Restaurante
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
-            CadastroEmpregados cadastroCozinheiro = new CadastroEmpregados();
+            CadastroCozinheiros cadastroCozinheiro = new CadastroCozinheiros();
             cadastroCozinheiro.Show();
             this.Close();
         }

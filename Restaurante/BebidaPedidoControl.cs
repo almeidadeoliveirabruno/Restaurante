@@ -31,11 +31,11 @@ namespace Restaurante
             Id = id;
             picImage.Image = caminhoImagem != null ? Image.FromFile(caminhoImagem) : null; // Carrega a imagem se o caminho não for nulo
         }
-        public void ResetarQuantidade()
-        {
-            Quantidade = 0; // idem acima
-            lblQuantidade.Text = Quantidade.ToString();
-        }
+        //public void ResetarQuantidade()
+        //{
+        //    Quantidade = 0; 
+        //    lblQuantidade.Text = Quantidade.ToString();
+        //}
 
         private void btnMais_Click(object sender, EventArgs e)
         {

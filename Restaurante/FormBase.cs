@@ -21,7 +21,7 @@ namespace Restaurante
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VisualizarEmpregados mostrarClientes = new VisualizarEmpregados();
+            MostrarClientes mostrarClientes = new MostrarClientes();
             mostrarClientes.Show();
             this.Close();
 

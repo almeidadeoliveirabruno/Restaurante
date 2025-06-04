@@ -1,6 +1,6 @@
 ﻿namespace Restaurante
 {
-    partial class CadastroEmpregados
+    partial class CadastroCozinheiros
     {
         /// <summary>
         /// Required designer variable.
@@ -221,7 +221,6 @@
             this.SalarioInput.Name = "SalarioInput";
             this.SalarioInput.Size = new System.Drawing.Size(280, 75);
             this.SalarioInput.TabIndex = 35;
-            this.SalarioInput.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.SalarioInput.Enter += new System.EventHandler(this.Input_Enter);
             this.SalarioInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidacaoDinheiro);
             this.SalarioInput.Leave += new System.EventHandler(this.Input_Leave);
@@ -251,7 +250,6 @@
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CadastroEmpregados";
             this.Text = "CadastroCozinheiro";
-            this.Load += new System.EventHandler(this.CadastroCozinheiro_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.NomeInput, 0);
             this.Controls.SetChildIndex(this.CPFInput, 0);

@@ -91,10 +91,7 @@ namespace Restaurante
         
     }
 
-        private void TempoEstimadoText_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void TempoEstimadoInput_KeyPress(object sender, KeyPressEventArgs e)
         {

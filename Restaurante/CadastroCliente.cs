@@ -19,40 +19,7 @@ namespace Restaurante
     
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Form1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CPF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -174,7 +141,7 @@ namespace Restaurante
 
         private void VisualizarClientes_Click(object sender, EventArgs e)
         {
-            VisualizarEmpregados mostrarClientes = new VisualizarEmpregados();
+            MostrarClientes mostrarClientes = new MostrarClientes();
             mostrarClientes.Show(); // abre o form como janela independente
             this.Close(); // fecha o form atual
         }
