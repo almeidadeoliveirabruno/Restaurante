@@ -19,7 +19,8 @@ namespace Restaurante
             dataGridView1.DataSource = null; 
             dataGridView1.DataSource = (RepositorioCliente.Clientes);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.Columns["CPF"].ReadOnly = true;
+            dataGridView1.Columns["Cpf"].ReadOnly = true;
+            dataGridView1.Columns["ClienteID"].ReadOnly = true;
             dataGridView1.Columns["ClienteId"].DisplayIndex = 0;
             dataGridView1.Columns["Nome"].DisplayIndex = 1;
             dataGridView1.Columns["Cpf"].DisplayIndex = 2;
@@ -29,10 +30,7 @@ namespace Restaurante
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.Refresh();

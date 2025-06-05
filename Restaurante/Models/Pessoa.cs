@@ -45,7 +45,7 @@ namespace Restaurante.Models
             get { return email; }
             set { email = value; }
         }
-        public int Idade //fazer exceções de erro
+        public int Idade 
         {
             get
             {

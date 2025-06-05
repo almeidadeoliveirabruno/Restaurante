@@ -10,8 +10,8 @@ namespace Restaurante
 {
     public partial class RealizarPedido : FormBase
     {
-        public List<Pratos> ListaPratos = new List<Pratos>();
-        public List<Bebidas> ListaBebidas = new List<Bebidas>();
+        public List<Pratos> ListaPratosAtual = new List<Pratos>();
+        public List<Bebidas> ListaBebidasAtual = new List<Bebidas>();
 
         public RealizarPedido()
         {
@@ -56,8 +56,8 @@ namespace Restaurante
         {
             decimal total = 0;
 
-            total += ListaPratos.Sum(p => p.Preco * p.Quantidade);
-            total += ListaBebidas.Sum(b => b.Preco * b.Quantidade);
+            total += ListaPratosAtual.Sum(p => p.Preco * p.Quantidade);
+            total += ListaBebidasAtual.Sum(b => b.Preco * b.Quantidade);
 
             TotalCusto.Text = $"Total: R$ {total:F2}";
         }
@@ -66,15 +66,16 @@ namespace Restaurante
         {
             if (quantidade <= 0)
             {
-                ListaPratos.RemoveAll(c => c.Id == id);
+                ListaPratosAtual.RemoveAll(c => c.Id == id);
             }
             else
             {
-                var comidaExistente = ListaPratos.FirstOrDefault(c => c.Id == id);
+                var comidaExistente = ListaPratosAtual.FirstOrDefault(c => c.Id == id);
                 if (comidaExistente != null)
                 {
                     comidaExistente.Quantidade = quantidade;
                 }
+                //se não tiver na lista atual procura no repositorio
                 else
                 {
                     var comida = RepositorioPratos.Pratos.FirstOrDefault(c => c.Id == id);
@@ -82,7 +83,7 @@ namespace Restaurante
                     {
                         var clone = comida.Clone();
                         clone.Quantidade = quantidade;
-                        ListaPratos.Add(clone);
+                        ListaPratosAtual.Add(clone);
                     }
                 }
             }
@@ -94,15 +95,16 @@ namespace Restaurante
         {
             if (quantidade <= 0)
             {
-                ListaBebidas.RemoveAll(b => b.Id == id);
+                ListaBebidasAtual.RemoveAll(b => b.Id == id);
             }
             else
             {
-                var bebidaExistente = ListaBebidas.FirstOrDefault(b => b.Id == id);
+                var bebidaExistente = ListaBebidasAtual.FirstOrDefault(b => b.Id == id);
                 if (bebidaExistente != null)
                 {
                     bebidaExistente.Quantidade = quantidade;
                 }
+                //se não tiver na lista atual procura no repositorio
                 else
                 {
                     var bebida = RepositorioBebidas.Bebidas.FirstOrDefault(b => b.Id == id);
@@ -110,7 +112,7 @@ namespace Restaurante
                     {
                         var clone = bebida.Clone();
                         clone.Quantidade = quantidade;
-                        ListaBebidas.Add(clone);
+                        ListaBebidasAtual.Add(clone);
                     }
                 }
             }
@@ -120,7 +122,7 @@ namespace Restaurante
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
-            if (ListaBebidas.Count == 0 && ListaPratos.Count == 0)
+            if (ListaBebidasAtual.Count == 0 && ListaPratosAtual.Count == 0)
             {
                 MessageBox.Show("Nenhum item foi adicionado ao pedido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -145,7 +147,7 @@ namespace Restaurante
             var garcomSelecionado = (Cozinheiro)comboBoxGarcom.SelectedItem;
 
             var clienteSelecionado = (Cliente)ClientesComBox.SelectedItem;
-            if (clienteSelecionado.Idade < 18 && ListaBebidas.Any(b => b.Alcool == true))
+            if (clienteSelecionado.Idade < 18 && ListaBebidasAtual.Any(b => b.Alcool == true))
             {
                 MessageBox.Show($"O cliente {clienteSelecionado.Nome} é menor de idade e não pode consumir álcool.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -156,8 +158,8 @@ namespace Restaurante
             {
                 Mesa mesaSelecionada = (Mesa)MesaCombox.SelectedItem;
 
-                var pratosCopia = ListaPratos.Select(p => p.Clone()).ToList();
-                var bebidasCopia = ListaBebidas.Select(b => b.Clone()).ToList();
+                var pratosCopia = ListaPratosAtual.Select(p => p.Clone()).ToList();
+                var bebidasCopia = ListaBebidasAtual.Select(b => b.Clone()).ToList();
 
                 Pedido pedidos = new Pedido(clienteSelecionado, pratosCopia, bebidasCopia, mesaSelecionada, garcomSelecionado);
                 pedidos.CalcularPrecoTotal();
@@ -165,8 +167,8 @@ namespace Restaurante
 
                 MessageBox.Show("Pedido realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                ListaPratos.Clear();
-                ListaBebidas.Clear();
+                ListaPratosAtual.Clear();
+                ListaBebidasAtual.Clear();
                 CarregarPedidos();
                 TotalCusto.Text = "Total: R$ 0,00";
             }
